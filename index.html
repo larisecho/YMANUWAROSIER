@@ -3,462 +3,710 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ELIL ROSIER ESPITIA — Modelo, Fotografía & Idiomas | Bogotá</title>
-<meta name="description" content="Portafolio oficial de Elil Rosier Espitia — modelaje, fotografía de animales de compañía, baile en eventos y coaching de inmersión de idiomas en Bogotá.">
+<title>YME MA’AT NUWA ROSIER</title>
+<meta id="meta-desc" name="description" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YME MA’AT NUWA ROSIER">
+<meta property="og:image" content="assets/img/portrait.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌹</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* ====== CONFIG DE TEXTO — edita aquí ====== */
-    --name: "Elil Rosier Espitia";
-    --tagline: "Modelo · Fotografía de compañía · Idiomas · Presencia en eventos";
-    --location: "Bogotá, Colombia";
-    --email: "aethervisualsart@gmail.com";
-    --phone-display: "+57 315 611 0435";
-
-    /* paleta — editorial clara, distinta a la versión anterior */
-    --paper:   #F2EFE8;
-    --paper-2: #E9E4D8;
-    --ink:     #1B1B16;
-    --ink-dim: #5B5749;
-    --moss:    #33463A;
-    --brass:   #A9825A;
-    --line:    #D9D2C0;
+    --black:#232227;
+    --black-2:#2E2D33;
+    --ivory:#F0EADC;
+    --ivory-dim:#BEB7A7;
+    --gold:#CDA862;
+    --gold-dim:rgba(205,168,98,.4);
+    --bar-bg:rgba(35,34,39,.94);
+    --veil:rgba(30,29,34,.96);
+    --serif:'Cormorant Garamond','Songti SC','Noto Serif CJK SC',Georgia,serif;
+    --sans:'Jost','PingFang SC','Microsoft YaHei',system-ui,sans-serif;
   }
-
+  :root[data-theme="ivory"]{
+    --black:#F4EFE4;
+    --black-2:#E9E2D3;
+    --ivory:#26242B;
+    --ivory-dim:#6A655B;
+    --gold:#8B6A2E;
+    --gold-dim:rgba(139,106,46,.4);
+    --bar-bg:rgba(244,239,228,.95);
+    --veil:rgba(244,239,228,.97);
+  }
   *{ box-sizing:border-box; margin:0; padding:0; }
-  html{ scroll-behavior:smooth; scroll-padding-top: env(safe-area-inset-top,0px); }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
   body{
-    background: var(--paper); color: var(--ink);
-    font-family:'Inter', ui-sans-serif, system-ui, sans-serif;
-    padding-top: env(safe-area-inset-top,0px);
-    padding-bottom: env(safe-area-inset-bottom,0px);
+    background:var(--black); color:var(--ivory); font-family:var(--sans); font-weight:300;
+    font-size:17px; line-height:1.7;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
   }
-  h1,h2,.display{ font-family:'Fraunces', Georgia, serif; font-weight:400; }
-  a{ color:inherit; text-decoration:none; }
-  .wrap{ max-width: 1100px; margin:0 auto; padding:0 28px; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  h1,h2,h3{ font-family:var(--serif); font-weight:300; }
+  :focus-visible{ outline:2px solid var(--gold); outline-offset:4px; }
+  .wrap{ max-width:1100px; margin:0 auto; padding:0 28px; }
 
-  /* draft banner */
-  .draft-banner{
-    background: var(--ink); color: var(--paper);
-    font-size: 12px; text-align:center; padding: 8px 16px;
+  /* masthead + tabs */
+  .mast{ padding:22px 0 0; }
+  .mast .wrap{ display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .mast-name{ font-family:var(--serif); letter-spacing:.28em; font-size:14px; text-transform:uppercase; text-decoration:none; }
+  .mast select{
+    font:inherit; font-size:13px; letter-spacing:.08em; background:transparent; color:var(--ivory);
+    border:1px solid var(--gold-dim); padding:6px 12px; border-radius:0;
   }
-
-  nav{
-    position: sticky; top: env(safe-area-inset-top,0px);
-    background: rgba(242,239,232,0.92); backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--line); z-index: 10;
+  .mast select option{ background:var(--black); }
+  .mast .tools{ display:flex; gap:10px; align-items:center; }
+  .theme-btn{ font:inherit; font-size:15px; line-height:1; background:transparent; color:var(--ivory); border:1px solid var(--gold-dim); padding:6px 11px; cursor:pointer; }
+  .theme-btn:hover{ border-color:var(--gold); }
+  .ap{ letter-spacing:0; margin:0 .02em 0 -.06em; }
+  .caption{ margin-top:14px; font-size:13px; color:var(--ivory-dim); }
+  .credo{ font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; }
+  .tabs{
+    position:sticky; top:env(safe-area-inset-top,0px); z-index:20; margin-top:18px;
+    background:var(--bar-bg); backdrop-filter:blur(8px); border-bottom:1px solid var(--gold-dim);
   }
-  nav .wrap{ display:flex; justify-content:space-between; align-items:center; height:64px; flex-wrap:wrap; }
-  .nav-name{ font-family:'Fraunces',serif; font-size:16px; letter-spacing:0.02em; }
-  .nav-links{ display:flex; gap:26px; font-size:13px; color:var(--ink-dim); }
-  .nav-links a:hover{ color:var(--moss); }
-  @media (max-width:720px){ .nav-links{ display:none; } }
-
-  .hero{
-    min-height: 72vh; display:flex; flex-direction:column;
-    justify-content:center; padding: 70px 0 50px;
-    border-bottom: 1px solid var(--line);
+  .tabs .wrap{ display:flex; gap:30px; overflow-x:auto; scrollbar-width:none; }
+  .tabs .wrap::-webkit-scrollbar{ display:none; }
+  .tabs a{
+    flex:none; text-decoration:none; padding:16px 0; font-size:12px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--ivory-dim); border-bottom:1px solid transparent; margin-bottom:-1px;
   }
-  .hero .eyebrow{ font-size:12px; letter-spacing:0.08em; color:var(--brass); margin-bottom:18px; }
-  .hero h1{ font-size: clamp(42px, 7vw, 84px); line-height:1.0; max-width:18ch; }
-  .hero .tagline{ margin-top:20px; font-size: clamp(15px,2vw,18px); color:var(--ink-dim); max-width:48ch; }
-  .hero .meta{ margin-top:28px; font-size:13px; color:var(--ink-dim); display:flex; gap:16px; flex-wrap:wrap; }
-  .hero .meta span.dot{ color:var(--brass); }
+  .tabs a:hover{ color:var(--ivory); }
+  .tabs a[aria-current="page"]{ color:var(--gold); border-bottom-color:var(--gold); }
 
-  section{ padding: 80px 0; border-bottom:1px solid var(--line); }
-  section:last-of-type{ border-bottom:none; }
-  .section-head{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:40px; gap:16px; flex-wrap:wrap; }
-  .section-head h2{ font-size: clamp(26px,3.6vw,38px); }
-  .section-head .note{ font-size:12px; color:var(--ink-dim); }
+  .panel[hidden]{ display:none; }
+  .panel{ animation:fade .6s ease both; }
+  @keyframes fade{ from{ opacity:0; } to{ opacity:1; } }
+  .block-pad{ padding:clamp(48px,7vw,88px) 0; }
+  h2.title{ font-size:clamp(30px,4.4vw,48px); letter-spacing:.14em; text-transform:uppercase; line-height:1.15; margin-bottom:22px; }
+  h3.sub{ font-size:24px; letter-spacing:.06em; margin-bottom:8px; }
+  .rule{ width:56px; height:1px; background:var(--gold); margin:0 0 26px; border:0; }
+  .lede{ max-width:60ch; color:var(--ivory); }
+  .dim{ color:var(--ivory-dim); }
+  .small{ font-size:15px; }
+
+  /* hero */
+  .hero .wrap{ display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(28px,5vw,72px); align-items:center; }
+  @media (max-width:820px){ .hero .wrap{ grid-template-columns:1fr; } }
+  .hero h1{ font-size:clamp(34px,6.4vw,70px); letter-spacing:.16em; text-transform:uppercase; line-height:1.12; text-wrap:balance; }
+  .hero .legal-name{ margin-top:16px; font-size:12px; letter-spacing:.34em; color:var(--gold); text-transform:uppercase; }
+  .hero .tagline{ margin-top:26px; font-family:var(--serif); font-style:italic; font-size:clamp(20px,2.4vw,26px); max-width:34ch; }
+  .hero .langline{ margin-top:14px; font-size:14px; color:var(--ivory-dim); }
+  .hero .actions{ margin-top:34px; display:flex; flex-wrap:wrap; gap:14px; }
+  .print{ background:#FBF8F0; padding:14px 14px 40px; border:1px solid var(--gold); box-shadow:0 0 0 8px var(--black), 0 0 0 9px var(--gold-dim); }
+  .print img{ width:100%; height:auto; }
+
+  .btn{
+    display:inline-block; font-family:var(--sans); font-size:12px; letter-spacing:.22em; text-transform:uppercase; text-decoration:none;
+    color:var(--black); background:var(--gold); border:1px solid var(--gold); padding:14px 26px; cursor:pointer;
+  }
+  .btn:hover{ background:transparent; color:var(--gold); }
+  .btn.ghost{ background:transparent; color:var(--gold); }
+  .btn.ghost:hover{ background:var(--gold); color:var(--black); }
+
+  .reel{ aspect-ratio:16/9; border:1px solid var(--gold-dim); background:var(--black-2); }
+  .reel iframe{ width:100%; height:100%; border:0; }
 
   /* services */
-  .services{ display:grid; grid-template-columns: repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
-  @media (max-width:720px){ .services{ grid-template-columns:1fr; } }
-  .service{ background:var(--paper); padding:32px; }
-  .service h3{ font-family:'Fraunces',serif; font-size:20px; margin-bottom:10px; }
-  .service p{ font-size:14px; color:var(--ink-dim); line-height:1.6; }
-  .service .genres{ margin-top:10px; font-size:12px; color:var(--brass); }
+  .controls{ display:flex; flex-wrap:wrap; gap:18px 30px; margin:8px 0 30px; align-items:flex-end; }
+  .ctl{ display:flex; flex-direction:column; gap:6px; }
+  .ctl label{ font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); }
+  .ctl select,.ctl input,.ctl textarea,.field select,.field input,.field textarea{
+    font:inherit; font-size:16px; color:var(--ivory); background:var(--black-2); border:1px solid var(--gold-dim); border-radius:0; padding:11px 13px;
+  }
+  .ctl select:focus,.field select:focus,.field input:focus,.field textarea:focus{ border-color:var(--gold); outline:none; }
+  .service{ padding:30px 0; border-top:1px solid var(--gold-dim); display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:20px 40px; }
+  @media (max-width:820px){ .service{ grid-template-columns:1fr; } }
+  .service p{ color:var(--ivory-dim); font-size:16px; }
+  .offer{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:11px 0; border-bottom:1px solid rgba(198,161,91,.14); }
+  .offer:last-child{ border-bottom:0; }
+  .offer .nm{ flex:1; }
+  .offer .pr{ font-family:var(--serif); font-size:22px; color:var(--gold); white-space:nowrap; }
+  .offer button{ background:none; border:0; color:var(--ivory-dim); font:inherit; font-size:11px; letter-spacing:.2em; text-transform:uppercase; cursor:pointer; text-decoration:underline; text-underline-offset:4px; }
+  .offer button:hover{ color:var(--gold); }
+  .nomatch{ padding:30px 0; color:var(--ivory-dim); font-style:italic; border-top:1px solid var(--gold-dim); }
 
-  /* reel */
-  .reel-frame{
-    position:relative; width:100%; aspect-ratio:16/9;
-    background:var(--ink); border:1px solid var(--line);
-  }
-  .reel-frame iframe{ width:100%; height:100%; border:0; }
-  .reel-note{ margin-top:14px; font-size:12px; color:var(--ink-dim); }
+  /* facts */
+  .facts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:var(--gold-dim); border:1px solid var(--gold-dim); margin:22px 0 40px; }
+  .fact{ background:var(--black); padding:20px 22px; }
+  .fact .k{ font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); }
+  .fact .v{ font-family:var(--serif); font-size:22px; }
 
-  /* portfolio */
-  .gallery-block{ margin-bottom: 46px; }
-  .gallery-block h3{ font-family:'Fraunces',serif; font-size:18px; margin-bottom:16px; }
-  .grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:12px; }
-  @media (max-width:720px){ .grid{ grid-template-columns: repeat(2,1fr); } }
-  .frame{ aspect-ratio:4/5; background:var(--paper-2); border:1px solid var(--line); overflow:hidden; }
-  .frame img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .empty-note{ grid-column: 1/-1; font-size:13px; color:var(--ink-dim); padding: 30px 0; border:1px dashed var(--line); text-align:center; }
-
-  /* slideshow — estilo editorial de revista, usado en Evolución de Marca Ética */
-  .slideshow{ position:relative; background:var(--ink); aspect-ratio: 4/3; overflow:hidden; }
-  @media (min-width:720px){ .slideshow{ aspect-ratio: 16/9; } }
-  .slideshow .slide{
-    position:absolute; inset:0; opacity:0; transition: opacity 0.5s ease;
-    display:flex; align-items:flex-end;
-  }
-  .slideshow .slide.active{ opacity:1; }
-  .slideshow .slide img{ width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
-  .slideshow .caption{
-    position:relative; z-index:1; padding:20px 24px; color:var(--paper);
-    background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
-    width:100%; font-size:13px; letter-spacing:0.03em;
-  }
-  .slideshow-nav{ position:absolute; bottom:16px; right:16px; z-index:2; display:flex; gap:8px; }
-  .slideshow-nav button{
-    background: rgba(242,239,232,0.85); border:none; width:32px; height:32px;
-    font-family:'Inter'; font-size:14px; cursor:pointer;
-  }
-  .slideshow-nav button:hover{ background: var(--paper); }
-
-  /* tarjeta de enlace externo (TikTok) */
-  .link-out{
-    display:flex; justify-content:space-between; align-items:center; gap:16px;
-    background:var(--paper-2); border:1px solid var(--line); padding:22px 26px; flex-wrap:wrap;
-  }
-  .link-out h3{ font-family:'Fraunces',serif; font-size:18px; margin-bottom:6px; }
-  .link-out p{ font-size:13px; color:var(--ink-dim); }
-  .link-out a.btn-link{
-    background:var(--moss); color:var(--paper); padding:10px 18px; font-size:13px; font-weight:600;
-    white-space:nowrap;
-  }
-  .link-out a.btn-link:hover{ background:var(--ink); }
-
-  /* booking form */
-  .booking{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
-  @media (max-width:720px){ .booking{ grid-template-columns:1fr; } }
-  .field{ display:flex; flex-direction:column; gap:6px; }
-  .field label{ font-size:12px; color:var(--ink-dim); }
-  .field select, .field input, .field textarea{
-    background:var(--paper); border:1px solid var(--line); padding:12px;
-    font-family:'Inter'; font-size:14px; color:var(--ink);
-  }
-  .field.full{ grid-column: 1/-1; }
-  .booking-note{ grid-column:1/-1; font-size:12px; color:var(--ink-dim); }
-  .btn{
-    grid-column:1/-1; background:var(--moss); color:var(--paper);
-    padding:14px 22px; border:none; font-family:'Inter'; font-size:14px;
-    font-weight:600; cursor:pointer; width: fit-content;
-  }
-  .btn:hover{ background:var(--ink); }
+  /* galleries */
+  .gal{ margin-bottom:48px; }
+  .gal[hidden]{ display:none; }
+  .masonry{ column-count:3; column-gap:12px; margin-top:14px; }
+  @media (max-width:820px){ .masonry{ column-count:2; } }
+  .masonry figure{ break-inside:avoid; margin-bottom:12px; }
+  .masonry button{ display:block; width:100%; border:1px solid var(--gold-dim); padding:0; background:var(--black-2); cursor:zoom-in; }
+  .masonry img{ width:100%; height:auto; }
+  .stage{ position:relative; aspect-ratio:4/5; max-height:80vh; background:var(--black-2); border:1px solid var(--gold-dim); overflow:hidden; margin-top:14px; }
+  @media (min-width:820px){ .stage{ aspect-ratio:16/10; } }
+  .slide{ position:absolute; inset:0; opacity:0; transition:opacity .6s ease; }
+  .slide.on{ opacity:1; }
+  .slide img{ width:100%; height:100%; object-fit:contain; background:var(--black-2); }
+  .stage-nav{ position:absolute; right:14px; bottom:14px; display:flex; gap:8px; z-index:2; }
+  .stage-nav button{ width:38px; height:38px; border:1px solid var(--gold); background:var(--bar-bg); color:var(--gold); font-size:18px; cursor:pointer; }
+  #lb{ position:fixed; inset:0; z-index:60; background:var(--veil); display:flex; align-items:center; justify-content:center; padding:24px; cursor:zoom-out; }
+  #lb[hidden]{ display:none; }
+  #lb img{ max-height:92vh; max-width:94vw; }
 
   /* inspirations */
-  details{ border-bottom:1px solid var(--line); padding:16px 0; }
-  summary{ cursor:pointer; font-family:'Fraunces',serif; font-size:17px; }
-  details ul{ margin-top:12px; padding-left:20px; font-size:13px; color:var(--ink-dim); line-height:1.8; }
+  .names h3{ font-size:13px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); font-family:var(--sans); font-weight:400; margin:30px 0 10px; }
+  .names p{ font-family:var(--serif); font-size:clamp(22px,3vw,30px); line-height:1.5; max-width:46ch; }
+  .names p span{ white-space:nowrap; }
+  .names p span:not(:last-child)::after{ content:"  /  "; color:var(--gold); white-space:pre; }
+  details{ border-top:1px solid var(--gold-dim); padding:16px 0; margin-top:34px; }
+  summary{ cursor:pointer; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); }
+  details p{ margin-top:12px; color:var(--ivory-dim); font-size:15px; }
 
-  /* legal */
-  .legal-block{ font-size:12px; color:var(--ink-dim); line-height:1.7; margin-bottom:20px; max-width:70ch; }
-  .legal-block strong{ color:var(--ink); }
+  /* booking */
+  .form{ display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:780px; margin:18px 0 20px; }
+  @media (max-width:820px){ .form{ grid-template-columns:1fr; } }
+  .field{ display:flex; flex-direction:column; gap:6px; }
+  .field.full{ grid-column:1/-1; }
+  .field label{ font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); }
+  .form .btn{ grid-column:1/-1; width:fit-content; }
+  .cols{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:34px 48px; margin-top:42px; }
+  .cols h3{ font-size:13px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); font-family:var(--sans); font-weight:400; margin-bottom:10px; }
+  .cols p{ color:var(--ivory-dim); font-size:16px; }
+  .contact a{ display:block; text-decoration:none; padding:4px 0; }
+  .contact a:hover{ color:var(--gold); }
 
-  footer{ padding: 30px 0 calc(30px + env(safe-area-inset-bottom,0px)); font-size:12px; color:var(--ink-dim); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
-  footer a:hover{ color:var(--moss); }
+  footer{ margin-top:30px; border-top:1px solid var(--gold-dim); padding:34px 0 calc(40px + env(safe-area-inset-bottom,0px)); font-size:14px; color:var(--ivory-dim); }
+  footer .wrap{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px 28px; }
+  footer nav{ display:flex; flex-wrap:wrap; gap:6px 22px; }
+  footer a{ text-decoration:none; }
+  footer a:hover{ color:var(--gold); }
 
-  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  :lang(zh) body,:lang(zh) .lede{ line-height:1.9; }
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; } .panel{ animation:none; } .slide{ transition:none; }
+  }
 </style>
 </head>
 <body>
 
-<div class="draft-banner">Sitio en evolución constante — versión borrador, puede contener texto sin pulir mientras se actualiza.</div>
-
-<nav>
+<div class="mast">
   <div class="wrap">
-    <div class="nav-name" id="nav-name"></div>
-    <div class="nav-links">
-      <a href="#servicios">Servicios</a>
-      <a href="#reel">Reel</a>
-      <a href="#portafolio">Portafolio</a>
-      <a href="#reservar">Reservar</a>
-      <a href="#inspiraciones">Inspiraciones</a>
-      <a href="#legal">Aviso legal</a>
+    <a class="mast-name" href="#/inicio" id="mast-name"></a>
+    <div class="tools">
+    <button type="button" class="theme-btn" id="theme-btn" aria-label="Theme"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" style="display:block"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+    <select id="lang-select" aria-label="Language">
+      <option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option>
+      <option value="fr">Français</option><option value="zh">中文</option><option value="no">Norsk</option>
+    </select>
     </div>
   </div>
-</nav>
+</div>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">PORTAFOLIO OFICIAL</div>
-    <h1 id="hero-name"></h1>
-    <p class="tagline" id="hero-tagline"></p>
-    <div class="meta">
-      <span id="hero-location"></span>
-      <span class="dot">·</span>
-      <span>Español (nativo) · Inglés (C2) · Alemán (B1)</span>
-    </div>
-  </div>
-</header>
+<nav class="tabs" aria-label="Menu"><div class="wrap" id="tabs"></div></nav>
 
-<section id="servicios">
-  <div class="wrap">
-    <div class="section-head"><h2>Servicios</h2></div>
-    <div class="services">
-      <div class="service">
-        <h3>Fotografía de animales de compañía</h3>
-        <p>Sesiones a domicilio para gatos y perros medianos, luz natural, entrega digital editada.</p>
-      </div>
-      <div class="service">
-        <h3>Baile en eventos / cabina DJ</h3>
-        <p>Presencia y baile en eventos privados o de club, coordinado previamente con el lugar y el organizador.</p>
-        <div class="genres">Dancehall · Afrobeats · Deep House · Melodic House · Techno · Progressive Techno</div>
-      </div>
-      <div class="service">
-        <h3>Coaching de inmersión de idiomas</h3>
-        <p>Conversación práctica orientada a fluidez oral real, actualmente en inglés y español.</p>
-      </div>
-      <div class="service">
-        <h3>Modelaje comercial y editorial</h3>
-        <p>Polaroids, digitales y colaboraciones editoriales bajo un marco de modelaje ético — ver sección de reserva.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<noscript><div class="wrap" style="padding:40px 28px;">YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA — Bogotá, Colombia</div></noscript>
 
-<section id="reel">
-  <div class="wrap">
-    <div class="section-head"><h2>Reel</h2><div class="note">Video de presentación</div></div>
-    <div class="reel-frame">
-      <iframe id="reel-iframe" src="" title="Reel" allowfullscreen></iframe>
-    </div>
-    <p class="reel-note">Para actualizar: reemplaza <code>REEL_YOUTUBE_ID</code> en el código con el ID de tu video de YouTube (la parte después de "v=" en la URL).</p>
-
-    <div class="link-out" style="margin-top:24px;">
+<main>
+<!-- INICIO -->
+<section class="panel" id="p-inicio" hidden>
+  <div class="hero block-pad">
+    <div class="wrap">
       <div>
-        <h3>Baile en eventos / cabina DJ</h3>
-        <p>Los videos de baile en vivo y en eventos se publican en TikTok.</p>
-      </div>
-      <a class="btn-link" id="tiktok-link" href="#" target="_blank">Ver en TikTok →</a>
-    </div>
-  </div>
-</section>
-
-<section id="portafolio">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Portafolio</h2>
-      <div class="note">Se actualiza solo al subir fotos a GitHub</div>
-    </div>
-
-    <div class="gallery-block">
-      <h3>Polaroids / Digitales</h3>
-      <div class="grid" id="grid-polaroids"></div>
-    </div>
-    <div class="gallery-block">
-      <h3>Evolución de Marca Ética</h3>
-      <p style="font-size:13px; color:var(--ink-dim); margin-bottom:16px;">Fotografías que reflejan mi evolución modelando de forma ética para marcas y productos — trabajo especulativo pensado para futuras colaboraciones.</p>
-      <div class="slideshow" id="slideshow-campaign">
-        <div class="slideshow-nav">
-          <button id="slide-prev">‹</button>
-          <button id="slide-next">›</button>
+        <h1 id="hero-name"></h1>
+        <p class="legal-name" id="legal-name"></p>
+        <p class="tagline" data-t="tagline"></p>
+        <p class="langline" data-t="langs"></p>
+        <div class="actions">
+          <a class="btn" href="#/servicios" data-t="ctaServices"></a>
+          <a class="btn ghost" href="#/reservar" data-t="ctaBook"></a>
         </div>
       </div>
+      <div><div class="print"><img src="assets/img/portrait.jpg" alt="YME MA’AT NUWA ROSIER" width="1200" height="1600"></div><p class="caption" data-t="lensNote"></p></div>
     </div>
-    <div class="gallery-block">
-      <h3>Mascotas</h3>
-      <div class="grid" id="grid-mascotas"></div>
-    </div>
-    <div class="gallery-block">
-      <h3>Eventos</h3>
-      <div class="grid" id="grid-eventos"></div>
-    </div>
+  </div>
+  <div class="wrap block-pad" style="padding-top:0;">
+    <hr class="rule">
+    <p class="lede" data-t="about"></p>
+  </div>
+  <div class="wrap block-pad" style="padding-top:0;">
+    <h2 class="title" data-t="reelH"></h2>
+    <div class="reel"><iframe id="reel-iframe" title="Reel" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    <p style="margin-top:22px;"><a class="btn ghost" id="tiktok-link" href="#" target="_blank" rel="noopener" data-t="ttBtn"></a></p>
   </div>
 </section>
 
-<section id="reservar">
-  <div class="wrap">
-    <div class="section-head"><h2>Reservar / Cotizar</h2></div>
-    <form class="booking" id="booking-form">
-      <div class="field">
-        <label for="tipo-evento">Tipo de evento</label>
-        <select id="tipo-evento">
-          <option>Evento corporativo</option>
-          <option>Fiesta privada</option>
-          <option>Club / discoteca</option>
-          <option>Feria o festival</option>
-          <option>Sesión fotográfica</option>
-          <option>Producción editorial o comercial</option>
-          <option>Otro</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="formato">Formato</label>
-        <select id="formato">
-          <option>Presencial</option>
-          <option>Virtual</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="fecha">Fecha propuesta</label>
-        <input type="date" id="fecha">
-      </div>
-      <div class="field">
-        <label for="lugar">Lugar / ciudad</label>
-        <input type="text" id="lugar" placeholder="Ej. Bogotá">
-      </div>
-      <div class="field full">
-        <label for="detalle">Detalles adicionales</label>
-        <textarea id="detalle" rows="3" placeholder="Duración, número de personas, presupuesto estimado..."></textarea>
-      </div>
-      <p class="booking-note">El precio final depende del tipo de evento, duración, ubicación y desplazamiento. Al enviar, se abrirá WhatsApp con un mensaje prellenado para coordinar directamente.</p>
-      <button type="button" class="btn" id="send-booking">Enviar solicitud por WhatsApp</button>
+<!-- SERVICIOS -->
+<section class="panel" id="p-servicios" hidden>
+  <div class="wrap block-pad">
+    <h2 class="title" data-t="tabServices"></h2>
+    <hr class="rule">
+    <p class="lede dim" data-t="svcIntro"></p>
+    <div class="controls">
+      <div class="ctl"><label for="sel-cur" data-t="lCurrency"></label><select id="sel-cur"><option>COP</option><option>USD</option><option>EUR</option></select></div>
+      <div class="ctl"><label for="sel-budget" data-t="lBudget"></label><select id="sel-budget"></select></div>
+    </div>
+    <div id="offers"></div>
+    <p class="small dim" style="margin-top:22px;" data-t="ratesNote"></p>
+    <div class="gal" id="b-mascotas" hidden style="margin-top:56px;"><h3 class="sub" data-t="gPets"></h3><div class="masonry" id="grid-mascotas"></div></div>
+    <div class="gal" id="b-eventos" hidden><h3 class="sub" data-t="gEvents"></h3><div class="masonry" id="grid-eventos"></div></div>
+  </div>
+</section>
+
+<!-- MODELAJE -->
+<section class="panel" id="p-modelaje" hidden>
+  <div class="wrap block-pad">
+    <h2 class="title" data-t="tabModeling"></h2>
+    <hr class="rule">
+    <p class="lede" data-t="mdIntro"></p>
+    <div class="facts">
+      <div class="fact"><div class="k" data-t="lHeight"></div><div class="v">1.67 m</div></div>
+      <div class="fact"><div class="k" data-t="lEyes"></div><div class="v" data-t="vEyes"></div></div>
+      <div class="fact"><div class="k" data-t="lLangs"></div><div class="v" style="font-size:17px;font-family:var(--sans);" data-t="langs"></div></div>
+    </div>
+    <p class="caption" style="margin:-24px 0 36px;" data-t="lensNote"></p>
+    <div class="gal" id="b-polaroids" hidden><h3 class="sub" data-t="gPol"></h3><div class="masonry" id="grid-polaroids"></div></div>
+    <div class="gal" id="b-campaign" hidden>
+      <h3 class="sub" data-t="gEd"></h3>
+      <p class="dim small" style="max-width:58ch;" data-t="gEdD"></p>
+      <div class="stage" id="stage"><div class="stage-nav"><button type="button" id="prev" aria-label="Previous">‹</button><button type="button" id="next" aria-label="Next">›</button></div></div>
+    </div>
+    <p class="dim" id="soon" data-t="soon" style="font-style:italic;"></p>
+    <p style="margin-top:30px;"><a class="btn" href="#/reservar" data-t="ctaBook"></a></p>
+  </div>
+</section>
+
+<!-- VOZ Y ACTUACION -->
+<section class="panel" id="p-voz" hidden>
+  <div class="wrap block-pad">
+    <h2 class="title" data-t="tabVoice"></h2>
+    <hr class="rule">
+    <h3 class="sub" data-t="sv_voice"></h3>
+    <p class="lede" data-t="vcIntro"></p>
+    <p style="margin:22px 0 56px; display:flex; flex-wrap:wrap; gap:14px;">
+      <a class="btn" id="voice-tt" href="#" target="_blank" rel="noopener" data-t="listenTT"></a>
+      <a class="btn ghost" id="voice-tb" href="#" target="_blank" rel="noopener" data-t="listenTB"></a>
+    </p>
+    <h3 class="sub" data-t="sv_act"></h3>
+    <p class="lede" data-t="sv_actD"></p>
+    <p style="margin-top:30px;"><a class="btn ghost" href="#/reservar" data-t="ctaBook"></a></p>
+  </div>
+</section>
+
+<!-- UNIVERSUM MANIFESTATION -->
+<section class="panel" id="p-inspiracion" hidden>
+  <div class="wrap block-pad">
+    <h2 class="title" data-t="tabInspiration"></h2>
+    <hr class="rule">
+    <p class="credo" data-t="credoLbl"></p>
+    <h3 class="sub">Universum Manifestation</h3>
+    <p class="lede dim" style="margin-top:10px;" data-t="unIntro"></p>
+    <div class="names">
+      <h3 data-t="gScreen"></h3>
+      <p><span>Valentina Zenere</span><span>Gino Pasqualini</span><span>Franco Masini</span><span>Ester Expósito</span><span>Matt Bomer</span><span>Uma Thurman</span><span>Scarlett Johansson</span><span>Viola Davis</span><span>Octavia Spencer</span><span>Nicole Kidman</span><span>Sofía Vergara</span><span>Uzo Aduba</span><span>Evan Peters</span></p>
+      <h3 data-t="gMusic"></h3>
+      <p><span>Shakira</span></p>
+      <h3 data-t="gThought"></h3>
+      <p><span>Simone de Beauvoir</span><span>Eve Kosofsky Sedgwick</span><span>Julio Cortázar</span><span>Nikola Tesla</span><span>Carl Jung</span></p>
+    </div>
+    <p class="dim small" style="margin-top:34px;" data-t="unMore"></p>
+    <p style="margin-top:18px;"><a class="btn" id="notion-link" href="#" target="_blank" rel="noopener" data-t="notionBtn"></a></p>
+    <details>
+      <summary data-t="designCredH"></summary>
+      <p>unomodels.com, ruthfranco.com, rojalondon.com, franciskurkdjian.com, initioparfums.com, dovecameron.com, cramtalent.com, celebritytalent.net</p>
+    </details>
+  </div>
+</section>
+
+<!-- RESERVAR -->
+<section class="panel" id="p-reservar" hidden>
+  <div class="wrap block-pad">
+    <h2 class="title" data-t="tabBook"></h2>
+    <hr class="rule">
+    <form class="form" id="booking-form" onsubmit="return false;">
+      <div class="field full"><label for="f-offer" data-t="lService"></label><select id="f-offer"></select></div>
+      <div class="field"><label for="f-format" data-t="lFormat"></label><select id="f-format"></select></div>
+      <div class="field"><label for="f-date" data-t="lDate"></label><input type="date" id="f-date"></div>
+      <div class="field"><label for="f-place" data-t="lPlace"></label><input type="text" id="f-place" data-ph="phPlace"></div>
+      <div class="field"><label for="f-budget" data-t="lBudget"></label><input type="text" id="f-budget" data-ph="phBudget"></div>
+      <div class="field full"><label for="f-detail" data-t="lDetail"></label><textarea id="f-detail" rows="3" data-ph="phDetail"></textarea></div>
+      <button type="button" class="btn" id="send-booking" data-t="bookBtn"></button>
     </form>
+    <p class="dim small" style="max-width:60ch;" data-t="bookNote"></p>
+    <div class="cols">
+      <div><h3 data-t="payH"></h3><p data-t="payP"></p></div>
+      <div><h3 data-t="depH"></h3><p data-t="depP"></p></div>
+      <div><h3 data-t="canH"></h3><p data-t="canP"></p></div>
+      <div><h3 data-t="travelH"></h3><p data-t="travelP"></p></div>
+      <div class="contact"><h3 data-t="contactH"></h3><a id="c-wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a id="c-tg" href="#" target="_blank" rel="noopener">Telegram</a><a id="c-mail" href="#"></a></div>
+    </div>
   </div>
 </section>
 
-<section id="inspiraciones">
-  <div class="wrap">
-    <div class="section-head"><h2>Inspiraciones del sitio</h2></div>
-    <details>
-      <summary>Sitios web (diseño y estructura)</summary>
-      <ul>
-        <li><strong>unomodels.com</strong> — estructura de perfil individual de modelo y presentación de datos físicos.</li>
-        <li><strong>ruthfranco.com</strong> — formato de reel/demo y presentación de talento.</li>
-        <li><strong>rojalondon.com</strong> — menús desplegables superiores y estética editorial de perfumería.</li>
-        <li><strong>franciskurkdjian.com / initioparfums.com</strong> — minimalismo tipográfico de lujo.</li>
-        <li><strong>dovecameron.com</strong> — estructura de pie de página con políticas legales.</li>
-        <li><strong>cramtalent.com</strong> — jerarquía de íconos de redes sociales.</li>
-      </ul>
-    </details>
-    <details>
-      <summary>人 — Inspiraciones de vida singular</summary>
-      <p style="font-size:13px; color:var(--ink-dim); margin-top:10px;">Espacio reservado para reconocer personas cuya presencia inspira esta evolución creativa. Se actualizará con el consentimiento explícito de cada persona antes de nombrarla públicamente.</p>
-    </details>
+<!-- LEGAL -->
+<section class="panel" id="p-legal" hidden>
+  <div class="wrap block-pad">
+    <h2 class="title" data-t="tabLegal"></h2>
+    <hr class="rule">
+    <p class="lede dim" data-t="legalIP"></p>
+    <p class="lede dim" style="margin-top:16px;" data-t="legalFis"></p>
   </div>
 </section>
-
-<section id="legal">
-  <div class="wrap">
-    <div class="section-head"><h2>Aviso legal</h2></div>
-    <div class="legal-block">
-      <strong>ES —</strong> Todo el contenido original de este sitio (estructura, textos y material visual) es propiedad de Elil Rosier Espitia y está protegido automáticamente por el Convenio de Berna y la Ley 23 de 1982 de Colombia. La reproducción textual debe citarse con nombre del autor y enlace del sitio. Infracciones en Colombia pueden reportarse a la Fiscalía General de la Nación: línea gratuita nacional 122, o 01 8000 9197 48, fiscalia.gov.co.
-    </div>
-    <div class="legal-block">
-      <strong>EN —</strong> All original content on this site is the property of Elil Rosier Espitia and is automatically protected under the Berne Convention and Colombian Law 23 of 1982. Textual reproduction must be credited with author name and site link.
-    </div>
-    <div class="legal-block">
-      Este sitio no ofrece ni promociona servicios de contenido para adultos. Cualquier actividad de ese tipo se gestiona en canales completamente separados y no vinculados a esta página.
-    </div>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+  <div class="wrap">
     <span id="footer-name"></span>
-    <span>
-      <a id="footer-email" href="#"></a> ·
-      <a id="footer-whatsapp" href="#">WhatsApp</a> ·
-      <a href="https://fiscalia.gov.co" target="_blank">Fiscalía General</a>
-    </span>
+    <nav id="footer-links"></nav>
   </div>
 </footer>
 
+<div id="lb" hidden><img alt=""></div>
+
 <script>
-  /* ====== CONFIG — edita estos dos valores con tu usuario y repositorio de GitHub ====== */
-  const GITHUB_USER = "larisecho";
-  const GITHUB_REPO = "UMANUWAROSIER";
-  const REEL_YOUTUBE_ID = "CcKe-NTfUXc";
-  const TIKTOK_HANDLE = "umanuwarosier"; // confirma que esta ortografía es correcta
+/* ========= CONFIG ========= */
+const CONFIG = {
+  displayName: "YME MA’AT NUWA ROSIER",
+  legalName: "ELIL ROSIER ESPITIA",
+  emailUser: "poseidonpeithonuros", emailDomain: "proton.me",
+  phone: "+57 315 611 0435",
+  tiktok: "umanuwarosierhaven",     // services TikTok for now
+  tumblr: "ymanuwarosierhaven",     // confirm this Tumblr address
+  telegram: "ymanuwarosier",      // confirm the exact spelling of the Telegram username
+  instagram: "", threads: "", wechat: "",   // fill in when they exist; links appear automatically
+  githubUser: "larisecho", githubRepo: "YMANUWAROSIER",
+  reelId: "CcKe-NTfUXc",
+  notionUrl: "https://app.notion.com/p/INSPIRACION-INSPIRATION-INSPIRATION-CIRCLE-397a7e8a7ac880589c18fc7f1b6558c1",
+  rates: { USD: 3250, EUR: 3600 },  // COP per unit, October 2026. Update every month or two.
+  feeAllowance: 1.08                // cushion for transfer / PayPal fees on USD and EUR prices
+};
+const FOLDERS = { "grid-polaroids":"assets/portfolio/polaroids", "grid-mascotas":"assets/portfolio/mascotas", "grid-eventos":"assets/portfolio/eventos" };
+const CAMPAIGN_FOLDER = "assets/portfolio/marca-etica";
 
-  /* Rutas de carpetas dentro del repositorio — crea estas carpetas y sube fotos ahí */
-  const CATEGORY_FOLDERS = {
-    "grid-polaroids": "assets/portfolio/polaroids",
-    "grid-mascotas":  "assets/portfolio/mascotas",
-    "grid-eventos":   "assets/portfolio/eventos"
-  };
-  const SPEC_CAMPAIGN_FOLDER = "assets/portfolio/marca-etica";
+/* ========= TRANSLATIONS: [en, es, de, fr, zh, no] ========= */
+const LANGS = ["en","es","de","fr","zh","no"];
+const LANG_META = { en:"en", es:"es", de:"de", fr:"fr", zh:"zh-Hans", no:"nb" };
+const LOCALE = { en:"en-US", es:"es-CO", de:"de-DE", fr:"fr-FR", zh:"zh-CN", no:"nb-NO" };
+const K = {
+title:["YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modeling, dance, voice and acting | Bogotá","YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modelaje, baile, voz y actuación | Bogotá","YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modeling, Tanz, Stimme und Schauspiel | Bogotá","YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Mannequinat, danse, voix et jeu | Bogotá","YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | 模特、舞蹈、配音与表演 | 波哥大","YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modellarbeid, dans, stemme og skuespill | Bogotá"],
+desc:["Official portfolio: modeling, dance, voice acting, screen acting, pet photography and language coaching in Bogotá, with rates by budget.","Portafolio oficial: modelaje, baile, actuación de voz y de pantalla, fotografía de mascotas e idiomas en Bogotá, con tarifas por presupuesto.","Offizielles Portfolio: Modeling, Tanz, Sprecher- und Schauspielarbeit, Haustierfotografie und Sprachcoaching in Bogotá, mit Preisen nach Budget.","Portfolio officiel : mannequinat, danse, voix, jeu à l'écran, photographie d'animaux et coaching de langues à Bogotá, avec tarifs selon le budget.","官方作品集：波哥大的模特、舞蹈、配音、影视表演、宠物摄影和语言辅导，按预算提供价格。","Offisielt portefølje: modellarbeid, dans, stemme- og skjermskuespill, kjæledyrfotografering og språkcoaching i Bogotá, med priser etter budsjett."],
+tabHome:["Home","Inicio","Start","Accueil","首页","Hjem"],
+tabServices:["Services and rates","Servicios y tarifas","Leistungen und Preise","Services et tarifs","服务与价格","Tjenester og priser"],
+tabModeling:["Modeling","Modelaje","Modeling","Mannequinat","模特","Modellarbeid"],
+tabVoice:["Voice and acting","Voz y actuación","Stimme und Schauspiel","Voix et jeu d'acteur","配音与表演","Stemme og skuespill"],
+tabInspiration:["Inspiration","Inspiración","Inspiration","Inspiration","灵感","Inspirasjon"],
+credoLbl:["My credo","Mi credo","Mein Credo","Mon credo","我的信条","Min credo"],
+themeLbl:["Light or dark theme","Tema claro u oscuro","Helles oder dunkles Design","Thème clair ou sombre","明暗主题","Lyst eller mørkt tema"],
+lensNote:["Some photos use colored contact lenses.","Algunas fotos usan lentes de contacto de color.","Einige Fotos zeigen farbige Kontaktlinsen.","Certaines photos utilisent des lentilles de contact colorées.","部分照片佩戴彩色隐形眼镜。","Noen bilder bruker fargede kontaktlinser."],
+tabBook:["Book and payments","Reservar y pagos","Buchen und Zahlung","Réserver et paiement","预约与付款","Bestill og betaling"],
+tabLegal:["Legal","Aviso legal","Rechtliches","Mentions légales","法律声明","Juridisk"],
+tagline:["Modeling, dance, voice and screen acting, languages. Bogotá, Colombia.","Modelaje, baile, actuación de voz y de pantalla, idiomas. Bogotá, Colombia.","Modeling, Tanz, Sprecher- und Schauspielarbeit, Sprachen. Bogotá, Kolumbien.","Mannequinat, danse, voix et jeu à l'écran, langues. Bogotá, Colombie.","模特、舞蹈、配音与影视表演、语言。哥伦比亚波哥大。","Modellarbeid, dans, stemme- og skjermskuespill, språk. Bogotá, Colombia."],
+langs:["Spanish (native), English C2, German B2, French A2, Chinese A2","Español (nativo), inglés C2, alemán B2, francés A2, chino A2","Spanisch (Muttersprache), Englisch C2, Deutsch B2, Französisch A2, Chinesisch A2","Espagnol (langue maternelle), anglais C2, allemand B2, français A2, chinois A2","西班牙语（母语）、英语 C2、德语 B2、法语 A2、中文 A2","Spansk (morsmål), engelsk C2, tysk B2, fransk A2, kinesisk A2"],
+about:["Bilingual and based in Bogotá. Former consecutive medical interpreter (English–Spanish). Today I work in modeling, dance, and voice and screen acting, and I build independent creative projects. I work with clear agreements, consent and professionalism.","Bilingüe y radicado en Bogotá. Antiguo intérprete médico consecutivo (inglés–español). Hoy trabajo en modelaje, baile y actuación de voz y de pantalla, y construyo proyectos creativos independientes. Trabajo con acuerdos claros, consentimiento y profesionalismo.","Zweisprachig und in Bogotá zu Hause. Früher Konsekutivdolmetscher für Medizin (Englisch–Spanisch). Heute arbeite ich in Modeling, Tanz sowie Sprecher- und Schauspielarbeit und baue unabhängige kreative Projekte auf. Ich arbeite mit klaren Absprachen, Einvernehmen und Professionalität.","Bilingue, installé à Bogotá. Ancien interprète médical consécutif (anglais–espagnol). Je travaille aujourd'hui dans le mannequinat, la danse, la voix et le jeu à l'écran, et je construis des projets créatifs indépendants. Je travaille avec des accords clairs, le consentement et du professionnalisme.","双语，常驻波哥大。曾任医疗连续传译员（英语—西班牙语）。现在从事模特、舞蹈、配音和影视表演，并独立打造创意项目。我以清晰的约定、知情同意和职业态度工作。","Tospråklig og basert i Bogotá. Tidligere konsekutiv medisinsk tolk (engelsk–spansk). I dag jobber jeg med modellarbeid, dans samt stemme- og skjermskuespill, og bygger selvstendige kreative prosjekter. Jeg jobber med tydelige avtaler, samtykke og profesjonalitet."],
+ctaServices:["See services and rates","Ver servicios y tarifas","Leistungen und Preise ansehen","Voir services et tarifs","查看服务与价格","Se tjenester og priser"],
+ctaBook:["Book","Reservar","Buchen","Réserver","预约","Bestill"],
+reelH:["Reel","Reel","Reel","Reel","短片","Reel"],
+ttBtn:["Dance and event videos on TikTok","Videos de baile y eventos en TikTok","Tanz- und Eventvideos auf TikTok","Vidéos de danse et d'événements sur TikTok","TikTok 上的舞蹈和活动视频","Dans- og arrangementsvideoer på TikTok"],
+svcIntro:["Choose a currency and a budget to see what fits. Rates are starting points; the final quote depends on duration, location and travel.","Elige una moneda y un presupuesto para ver qué se ajusta. Las tarifas son puntos de partida; la cotización final depende de duración, lugar y desplazamiento.","Wählen Sie Währung und Budget, um passende Angebote zu sehen. Die Preise sind Ausgangswerte; das endgültige Angebot hängt von Dauer, Ort und Anreise ab.","Choisissez une devise et un budget pour voir ce qui convient. Les tarifs sont des points de départ ; le devis final dépend de la durée, du lieu et du déplacement.","选择货币和预算，查看合适的方案。价格为起步价，最终报价取决于时长、地点和交通。","Velg valuta og budsjett for å se hva som passer. Prisene er utgangspunkt; endelig tilbud avhenger av varighet, sted og reise."],
+lCurrency:["Currency","Moneda","Währung","Devise","货币","Valuta"],
+lBudget:["Budget","Presupuesto","Budget","Budget","预算","Budsjett"],
+bAll:["Any budget","Cualquier presupuesto","Beliebiges Budget","Tout budget","不限预算","Alle budsjetter"],
+bUp:["Up to","Hasta","Bis","Jusqu'à","最高","Opptil"],
+bOver:["Over","Más de","Über","Plus de","超过","Over"],
+ratesNote:["USD and EUR prices are converted at the October 2026 rate and include an allowance for transfer or PayPal fees.","Los precios en USD y EUR se convierten al cambio de octubre de 2026 e incluyen un margen para comisiones de transferencia o PayPal.","USD- und EUR-Preise sind zum Kurs von Oktober 2026 umgerechnet und enthalten einen Aufschlag für Überweisungs- oder PayPal-Gebühren.","Les prix en USD et EUR sont convertis au taux d'octobre 2026 et incluent une marge pour les frais de virement ou PayPal.","美元和欧元价格按 2026 年 10 月汇率换算，并包含转账或 PayPal 手续费的预留。","Priser i USD og EUR er regnet om til kursen i oktober 2026 og inkluderer et påslag for overførings- eller PayPal-avgifter."],
+noMatch:["Nothing fits this budget yet. Write to me for a custom proposal.","Nada se ajusta a este presupuesto todavía. Escríbeme y preparo una propuesta a medida.","Für dieses Budget gibt es noch nichts Passendes. Schreiben Sie mir für ein individuelles Angebot.","Rien ne correspond encore à ce budget. Écrivez-moi pour une proposition sur mesure.","目前没有符合此预算的方案。请联系我定制报价。","Ingenting passer dette budsjettet ennå. Skriv til meg for et tilpasset tilbud."],
+request:["Request","Solicitar","Anfragen","Demander","预约","Be om"],
+onQuote:["On quote","Bajo cotización","Auf Anfrage","Sur devis","报价","Etter tilbud"],
+sv_pet:["Pet photography","Fotografía de mascotas","Haustierfotografie","Photographie d'animaux","宠物摄影","Kjæledyrfotografering"],
+sv_petD:["At-home sessions for cats and medium-sized dogs, natural light, edited digital delivery.","Sesiones a domicilio para gatos y perros medianos, luz natural, entrega digital editada.","Sessions bei Ihnen zu Hause für Katzen und mittelgroße Hunde, natürliches Licht, bearbeitete digitale Lieferung.","Séances à domicile pour chats et chiens de taille moyenne, lumière naturelle, livraison numérique retouchée.","上门拍摄，适合猫和中型犬，自然光，交付修饰后的电子照片。","Hjemmebesøk for katter og mellomstore hunder, naturlig lys, redigerte digitale bilder."],
+sv_lang:["Language immersion coaching","Coaching de inmersión de idiomas","Sprach-Immersionscoaching","Coaching d'immersion linguistique","语言沉浸式辅导","Språkcoaching med innlevelse"],
+sv_langD:["Practical conversation focused on real spoken fluency, in English and Spanish.","Conversación práctica orientada a fluidez oral real, en inglés y español.","Praktische Konversation für echte mündliche Sicherheit, auf Englisch und Spanisch.","Conversation pratique axée sur une réelle aisance orale, en anglais et en espagnol.","以真实口语流利度为目标的实用对话，提供英语和西班牙语。","Praktisk samtale med fokus på reell muntlig flyt, på engelsk og spansk."],
+sv_social:["Social media account setup","Creación de cuentas de redes sociales","Einrichtung von Social-Media-Konten","Création de comptes sur les réseaux sociaux","社交媒体账号搭建","Oppsett av kontoer i sosiale medier"],
+sv_socialD:["Setting up and organizing profiles for small businesses and creators: bio, structure and a first publishing plan.","Configuración y organización de perfiles para pequeños negocios y creadores: biografía, estructura y primer plan de publicación.","Einrichtung und Organisation von Profilen für kleine Unternehmen und Kreative: Bio, Struktur und erster Veröffentlichungsplan.","Mise en place et organisation de profils pour petits commerces et créateurs : bio, structure et premier plan de publication.","为小商家和创作者搭建并整理账号：简介、结构和首个发布计划。","Oppsett og organisering av profiler for små bedrifter og skapere: bio, struktur og en første publiseringsplan."],
+sv_dance:["Event dancing and DJ booth","Baile en eventos y cabina DJ","Tanz auf Events und am DJ-Pult","Danse en événements et cabine DJ","活动舞蹈与 DJ 台","Dans på arrangementer og ved DJ-bås"],
+sv_danceD:["Presence and dancing at private or club events, arranged in advance with the venue and the organizer.","Presencia y baile en eventos privados o de club, coordinado previamente con el lugar y el organizador.","Präsenz und Tanz bei privaten oder Club-Events, vorab mit Location und Veranstalter abgestimmt.","Présence et danse lors d'événements privés ou en club, convenues à l'avance avec le lieu et l'organisateur.","在私人活动或俱乐部活动中出场和舞蹈，事先与场地和主办方协调。","Tilstedeværelse og dans på private arrangementer eller klubber, avtalt på forhånd med stedet og arrangøren."],
+sv_model:["Commercial and editorial modeling","Modelaje comercial y editorial","Kommerzielles und Editorial-Modeling","Mannequinat commercial et éditorial","商业与杂志模特","Kommersielt og redaksjonelt modellarbeid"],
+sv_modelD:["Polaroids, digitals and editorial collaborations under an ethical modeling framework.","Polaroids, digitales y colaboraciones editoriales bajo un marco de modelaje ético.","Polaroids, Digitals und redaktionelle Kooperationen im Rahmen ethischen Modelings.","Polaroids, digitales et collaborations éditoriales dans un cadre de mannequinat éthique.","在道德模特准则下提供宝丽来、数码试镜照和杂志合作。","Polaroider, digitals og redaksjonelle samarbeid innenfor et etisk rammeverk."],
+sv_voice:["Voice acting","Actuación de voz","Sprecherarbeit","Voix off et doublage","配音","Stemmeskuespill"],
+sv_voiceD:["A growing repertoire. Samples on TikTok and Tumblr.","Repertorio en crecimiento. Muestras en TikTok y Tumblr.","Wachsendes Repertoire. Hörproben auf TikTok und Tumblr.","Répertoire en croissance. Extraits sur TikTok et Tumblr.","不断扩展的作品范围。样片见 TikTok 和 Tumblr。","Voksende repertoar. Prøver på TikTok og Tumblr."],
+sv_act:["Screen acting","Actuación en pantalla","Schauspiel vor der Kamera","Jeu à l'écran","影视表演","Skjermskuespill"],
+sv_actD:["Self-taught. Played a mental-health character in an outreach piece made with psychiatry specialists.","Formación autodidacta. Interpretación de un personaje de salud mental en una pieza de divulgación con especialistas en psiquiatría.","Autodidaktisch. Verkörperung einer Figur zum Thema psychische Gesundheit in einem Aufklärungsbeitrag mit Fachleuten der Psychiatrie.","Autodidacte. Incarnation d'un personnage lié à la santé mentale dans une pièce de sensibilisation avec des spécialistes en psychiatrie.","自学成才。曾在与精神科专家合作的科普作品中饰演一位心理健康主题角色。","Selvlært. Spilte en rolle om psykisk helse i et opplysningsarbeid sammen med psykiatrifagfolk."],
+sv_custom:["Custom proposals","Propuestas a medida","Individuelle Angebote","Propositions sur mesure","定制方案","Skreddersydde forslag"],
+sv_customD:["For larger budgets: multi-day work, travel and combined services. Travel costs are covered by the client.","Para presupuestos mayores: trabajos de varios días, viajes y servicios combinados. Los gastos de viaje corren por cuenta del cliente.","Für größere Budgets: mehrtägige Arbeiten, Reisen und kombinierte Leistungen. Reisekosten trägt der Auftraggeber.","Pour les budgets plus importants : travaux de plusieurs jours, déplacements et services combinés. Les frais de voyage sont à la charge du client.","适用于更大预算：多日工作、出行和组合服务。差旅费用由客户承担。","For større budsjetter: flerdagersarbeid, reiser og kombinerte tjenester. Reisekostnader dekkes av oppdragsgiveren."],
+o1:["Mini session (45 min, 20 edited photos)","Sesión mini (45 min, 20 fotos editadas)","Mini-Session (45 Min., 20 bearbeitete Fotos)","Mini-séance (45 min, 20 photos retouchées)","迷你拍摄（45 分钟，20 张精修照片）","Minisesjon (45 min, 20 redigerte bilder)"],
+o2:["Full session (90 min, 40 edited photos)","Sesión completa (90 min, 40 fotos editadas)","Volle Session (90 Min., 40 bearbeitete Fotos)","Séance complète (90 min, 40 photos retouchées)","完整拍摄（90 分钟，40 张精修照片）","Full sesjon (90 min, 40 redigerte bilder)"],
+o3:["Trial lesson (30 min)","Clase de prueba (30 min)","Probestunde (30 Min.)","Cours d'essai (30 min)","试听课（30 分钟）","Prøvetime (30 min)"],
+o4:["One-hour session","Sesión de una hora","Einzelstunde","Séance d'une heure","单次课程（1 小时）","Én times økt"],
+o5:["Pack of 4 sessions","Paquete de 4 sesiones","4er-Paket","Forfait de 4 séances","4 节课套餐","Pakke med 4 økter"],
+o6:["Basic setup (1 network)","Configuración base (1 red)","Basis-Einrichtung (1 Netzwerk)","Mise en place de base (1 réseau)","基础搭建（1 个平台）","Grunnoppsett (1 nettverk)"],
+o7:["Complete setup (3 networks, 30-day plan)","Configuración completa (3 redes, plan de 30 días)","Komplett-Einrichtung (3 Netzwerke, 30-Tage-Plan)","Mise en place complète (3 réseaux, plan de 30 jours)","完整搭建（3 个平台，30 天计划）","Komplett oppsett (3 nettverk, 30-dagersplan)"],
+o8:["Two-hour set","Set de dos horas","Zwei-Stunden-Set","Set de deux heures","两小时表演","To-timers sett"],
+o9:["Four-hour set","Set de cuatro horas","Vier-Stunden-Set","Set de quatre heures","四小时表演","Fire-timers sett"],
+o10:["Polaroids and digitals (1 hour)","Polaroids y digitales (1 hora)","Polaroids und Digitals (1 Stunde)","Polaroids et digitales (1 heure)","宝丽来与数码照（1 小时）","Polaroider og digitals (1 time)"],
+o11:["Half day, editorial or commercial (4 hours)","Medio día editorial o comercial (4 horas)","Halbtag, redaktionell oder kommerziell (4 Std.)","Demi-journée éditoriale ou commerciale (4 h)","半天杂志或商业拍摄（4 小时）","Halv dag, redaksjonell eller kommersiell (4 timer)"],
+o12:["Full day (8 hours)","Día completo (8 horas)","Ganztag (8 Stunden)","Journée complète (8 heures)","全天（8 小时）","Hel dag (8 timer)"],
+o13:["Spot up to 30 seconds","Locución de hasta 30 segundos","Spot bis 30 Sekunden","Spot jusqu'à 30 secondes","30 秒内广告配音","Reklame opptil 30 sekunder"],
+o14:["Narration, per finished minute","Narración, por minuto terminado","Erzählung, pro fertiger Minute","Narration, par minute finalisée","旁白，按成品分钟计","Fortelling, per ferdig minutt"],
+o15:["Filming day (up to 8 hours)","Día de rodaje (hasta 8 horas)","Drehtag (bis 8 Stunden)","Jour de tournage (jusqu'à 8 heures)","拍摄日（最长 8 小时）","Innspillingsdag (opptil 8 timer)"],
+o16:["Multi-day productions, travel and custom projects","Producciones de varios días, viajes y proyectos a medida","Mehrtägige Produktionen, Reisen und individuelle Projekte","Productions de plusieurs jours, voyages et projets sur mesure","多日制作、出行和定制项目","Flerdagersproduksjoner, reiser og skreddersydde prosjekter"],
+mdIntro:["Commercial and editorial work under an ethical modeling framework: clear terms, consent and agreed image use.","Trabajo comercial y editorial bajo un marco de modelaje ético: condiciones claras, consentimiento y uso de imagen acordado.","Kommerzielle und redaktionelle Arbeit im Rahmen ethischen Modelings: klare Bedingungen, Einvernehmen und vereinbarte Bildnutzung.","Travail commercial et éditorial dans un cadre de mannequinat éthique : conditions claires, consentement et usage de l'image convenu.","在道德模特准则下进行商业与杂志工作：条款清晰、知情同意、肖像使用事先约定。","Kommersielt og redaksjonelt arbeid innenfor et etisk rammeverk: tydelige vilkår, samtykke og avtalt bruk av bilder."],
+lHeight:["Height","Estatura","Größe","Taille","身高","Høyde"],
+lEyes:["Eyes","Ojos","Augen","Yeux","眼睛","Øyne"],
+vEyes:["Brown (light brown in sunlight)","Marrón (marrón claro con luz solar)","Braun (bei Sonnenlicht hellbraun)","Marron (marron clair au soleil)","棕色（阳光下呈浅棕色）","Brun (lysebrun i sollys)"],
+lLangs:["Languages","Idiomas","Sprachen","Langues","语言","Språk"],
+gPol:["Polaroids and digitals","Polaroids y digitales","Polaroids und Digitals","Polaroids et digitales","宝丽来与数码照","Polaroider og digitals"],
+gEd:["Ethical brand evolution","Evolución de marca ética","Ethische Markenentwicklung","Évolution de marque éthique","道德品牌演进","Etisk merkevareutvikling"],
+gEdD:["Photographs of my evolution as an ethical model for brands and products. Speculative work made for future collaborations.","Fotografías de mi evolución como modelo ético para marcas y productos. Trabajo especulativo pensado para futuras colaboraciones.","Fotos meiner Entwicklung als ethisches Model für Marken und Produkte. Spekulative Arbeiten für künftige Kooperationen.","Photographies de mon évolution comme modèle éthique pour des marques et des produits. Travail spéculatif pensé pour de futures collaborations.","记录我作为品牌和产品道德模特的成长。这是为未来合作准备的预演作品。","Bilder av utviklingen min som etisk modell for merker og produkter. Spekulativt arbeid laget for fremtidige samarbeid."],
+gPets:["Pets","Mascotas","Haustiere","Animaux","宠物","Kjæledyr"],
+gEvents:["Events","Eventos","Events","Événements","活动","Arrangementer"],
+soon:["More photos coming soon.","Próximamente más fotos.","Weitere Fotos folgen in Kürze.","D'autres photos arrivent bientôt.","更多照片即将上传。","Flere bilder kommer snart."],
+vcIntro:["Voice work that grows with every recording. Samples live on TikTok and Tumblr.","Un trabajo de voz que crece con cada grabación. Las muestras están en TikTok y Tumblr.","Stimmarbeit, die mit jeder Aufnahme wächst. Hörproben auf TikTok und Tumblr.","Un travail de voix qui grandit à chaque enregistrement. Extraits sur TikTok et Tumblr.","配音作品随每次录音不断成长。样片见 TikTok 和 Tumblr。","Stemmearbeid som vokser for hver opptak. Prøver på TikTok og Tumblr."],
+listenTT:["Listen on TikTok","Escuchar en TikTok","Auf TikTok anhören","Écouter sur TikTok","在 TikTok 收听","Lytt på TikTok"],
+listenTB:["Listen on Tumblr","Escuchar en Tumblr","Auf Tumblr anhören","Écouter sur Tumblr","在 Tumblr 收听","Lytt på Tumblr"],
+unIntro:["The people whose work and presence shape mine. They are inspiration, not affiliation: naming someone here does not imply a relationship or an endorsement.","Las personas cuyo trabajo y presencia dan forma al mío. Son inspiración, no afiliación: nombrar a alguien aquí no implica relación ni respaldo.","Menschen, deren Arbeit und Präsenz meine prägen. Sie sind Inspiration, keine Zugehörigkeit: Die Nennung bedeutet weder eine Beziehung noch eine Empfehlung.","Les personnes dont le travail et la présence nourrissent les miens. Elles sont une inspiration, pas une affiliation : les nommer ici n'implique ni relation ni soutien.","作品与气场塑造了我的人。他们是灵感而非关联：在此列出姓名并不代表存在关系或获得认可。","Menneskene hvis arbeid og nærvær former mitt. De er inspirasjon, ikke tilknytning: å nevne dem her betyr verken relasjon eller støtte."],
+gScreen:["Screen and stage","Pantalla y escena","Leinwand und Bühne","Écran et scène","银幕与舞台","Lerret og scene"],
+gMusic:["Music","Música","Musik","Musique","音乐","Musikk"],
+gThought:["Thought, letters and science","Pensamiento, letras y ciencia","Denken, Literatur und Wissenschaft","Pensée, lettres et science","思想、文学与科学","Tanke, litteratur og vitenskap"],
+unMore:["The circle keeps growing; more people are added on Notion.","El círculo sigue creciendo; en Notion se suman más personas.","Der Kreis wächst weiter; auf Notion kommen weitere Menschen hinzu.","Le cercle continue de grandir ; d'autres personnes s'ajoutent sur Notion.","灵感圈仍在扩展，更多人物将在 Notion 中加入。","Sirkelen vokser; flere personer legges til på Notion."],
+notionBtn:["Open the inspiration circle on Notion","Abrir el círculo de inspiración en Notion","Inspirationskreis auf Notion öffnen","Ouvrir le cercle d'inspiration sur Notion","在 Notion 打开灵感圈","Åpne inspirasjonssirkelen på Notion"],
+designCredH:["Design references","Referencias de diseño","Designreferenzen","Références de design","设计参考","Designreferanser"],
+lService:["Service","Servicio","Leistung","Service","服务","Tjeneste"],
+lFormat:["Format","Formato","Format","Format","形式","Format"],
+fmOpts:[["In person","Virtual"],["Presencial","Virtual"],["Vor Ort","Virtuell"],["Sur place","Virtuel"],["线下","线上"],["Fysisk","Virtuelt"]],
+lDate:["Proposed date","Fecha propuesta","Vorgeschlagenes Datum","Date proposée","拟定日期","Foreslått dato"],
+lPlace:["Place / city","Lugar / ciudad","Ort / Stadt","Lieu / ville","地点 / 城市","Sted / by"],
+phPlace:["e.g. Bogotá","Ej. Bogotá","z. B. Bogotá","Ex. Bogotá","例如：波哥大","f.eks. Bogotá"],
+phBudget:["Amount and currency","Monto y moneda","Betrag und Währung","Montant et devise","金额与货币","Beløp og valuta"],
+lDetail:["Additional details","Detalles adicionales","Weitere Angaben","Détails supplémentaires","补充说明","Tilleggsopplysninger"],
+phDetail:["Duration, number of people, venue...","Duración, número de personas, lugar...","Dauer, Personenzahl, Ort...","Durée, nombre de personnes, lieu...","时长、人数、场地……","Varighet, antall personer, sted..."],
+bookNote:["Sending opens WhatsApp with a prefilled message so we can agree on details directly. A booking is confirmed once the deposit is credited.","Al enviar se abre WhatsApp con un mensaje prellenado para acordar los detalles directamente. La reserva se confirma cuando el anticipo está acreditado.","Beim Senden öffnet sich WhatsApp mit einer vorbereiteten Nachricht, um Details direkt abzustimmen. Die Buchung gilt, sobald die Anzahlung gutgeschrieben ist.","L'envoi ouvre WhatsApp avec un message prérempli pour convenir des détails directement. La réservation est confirmée une fois l'acompte crédité.","点击发送将打开 WhatsApp 并预填信息，方便直接商定细节。定金到账后预约才算确认。","Når du sender, åpnes WhatsApp med en forhåndsutfylt melding så vi kan avtale detaljer direkte. Bestillingen er bekreftet når depositumet er godskrevet."],
+bookBtn:["Send request via WhatsApp","Enviar solicitud por WhatsApp","Anfrage per WhatsApp senden","Envoyer la demande par WhatsApp","通过 WhatsApp 发送请求","Send forespørsel via WhatsApp"],
+msgIntro:["Hello, I'd like to request a booking.","Hola, quiero solicitar una reserva.","Hallo, ich möchte eine Buchung anfragen.","Bonjour, je souhaite faire une demande de réservation.","您好，我想预约。","Hei, jeg vil gjerne bestille."],
+tbc:["to be confirmed","por confirmar","noch offen","à confirmer","待确认","avklares"],
+noDetail:["no additional details","sin detalles adicionales","keine weiteren Angaben","aucun détail supplémentaire","无补充说明","ingen tilleggsopplysninger"],
+payH:["Payments","Pagos","Zahlung","Paiements","付款","Betaling"],
+payP:["Accepted: international bank transfer, Bre-B and PayPal. A booking is confirmed once the deposit is credited to my account, which can take time depending on the method. Transfer or PayPal fees are covered by the client; USD and EUR prices already include an allowance for them.","Se aceptan transferencia bancaria internacional, Bre-B y PayPal. La reserva queda en firme cuando el anticipo está acreditado en mi cuenta, lo que puede tardar según el método. Las comisiones de transferencia o PayPal corren por cuenta del cliente; los precios en USD y EUR ya incluyen un margen para ellas.","Akzeptiert werden internationale Banküberweisung, Bre-B und PayPal. Die Buchung gilt, sobald die Anzahlung auf meinem Konto gutgeschrieben ist, was je nach Methode dauern kann. Überweisungs- oder PayPal-Gebühren trägt der Auftraggeber; USD- und EUR-Preise enthalten dafür bereits einen Aufschlag.","Sont acceptés : virement bancaire international, Bre-B et PayPal. La réservation est confirmée une fois l'acompte crédité sur mon compte, ce qui peut prendre du temps selon la méthode. Les frais de virement ou PayPal sont à la charge du client ; les prix en USD et EUR incluent déjà une marge pour eux.","接受国际银行转账、Bre-B 和 PayPal。定金到账后预约才算确认，不同方式的到账时间可能不同。转账或 PayPal 手续费由客户承担；美元和欧元价格已包含相应预留。","Jeg tar imot internasjonal bankoverføring, Bre-B og PayPal. Bestillingen er bekreftet når depositumet er godskrevet kontoen min, noe som kan ta tid avhengig av metode. Overførings- eller PayPal-gebyrer dekkes av kunden; priser i USD og EUR inkluderer allerede et påslag."],
+depH:["Deposit and balance","Anticipo y saldo","Anzahlung und Restbetrag","Acompte et solde","定金与尾款","Depositum og restbeløp"],
+depP:["A 50% deposit confirms the date. The balance must be credited at least 48 hours before the service. Services under the equivalent of 250,000 COP are paid in full upfront.","Un anticipo del 50% confirma la fecha. El saldo debe estar acreditado al menos 48 horas antes del servicio. Los servicios menores al equivalente de 250.000 COP se pagan completos por adelantado.","Eine Anzahlung von 50 % bestätigt den Termin. Der Restbetrag muss spätestens 48 Stunden vor der Leistung gutgeschrieben sein. Leistungen unter dem Gegenwert von 250.000 COP werden vorab vollständig bezahlt.","Un acompte de 50 % confirme la date. Le solde doit être crédité au moins 48 heures avant la prestation. Les services inférieurs à l'équivalent de 250 000 COP sont payés intégralement à l'avance.","支付 50% 定金即确认日期，尾款须在服务前至少 48 小时到账。低于约 25 万哥伦比亚比索的服务需提前全额支付。","Et depositum på 50 % bekrefter datoen. Restbeløpet må være godskrevet minst 48 timer før tjenesten. Tjenester under verdien av 250 000 COP betales fullt ut på forhånd."],
+canH:["Cancellation and refunds","Cancelaciones y reembolsos","Stornierung und Erstattung","Annulation et remboursement","取消与退款","Avbestilling og refusjon"],
+canP:["If you booked remotely and the service is more than five days away, Colombian consumer law (Law 1480 of 2011, art. 47) may give you five business days to withdraw with a full refund. After that, the deposit is non-refundable if you cancel, because it holds the date; you can reschedule once with at least 72 hours' notice and the deposit carries over. If I cannot deliver the service, you get everything you paid back within five business days, or a new date of your choice.","Si reservaste a distancia y el servicio es en más de cinco días, el Estatuto del Consumidor (Ley 1480 de 2011, art. 47) puede darte cinco días hábiles para retractarte con reembolso total. Pasado ese plazo, el anticipo no es reembolsable si cancelas, porque reserva la fecha; puedes reprogramar una vez con al menos 72 horas de aviso y el anticipo se traslada. Si yo no puedo prestar el servicio, se te reembolsa todo lo pagado en cinco días hábiles, o eliges una nueva fecha.","Wenn Sie aus der Ferne gebucht haben und die Leistung mehr als fünf Tage entfernt liegt, kann das kolumbianische Verbraucherrecht (Gesetz 1480 von 2011, Art. 47) Ihnen fünf Werktage für einen Widerruf mit voller Erstattung geben. Danach ist die Anzahlung bei Stornierung nicht erstattbar, weil sie den Termin hält; Sie können einmal mit mindestens 72 Stunden Vorlauf umbuchen, die Anzahlung wird übertragen. Kann ich die Leistung nicht erbringen, erhalten Sie alles Gezahlte binnen fünf Werktagen zurück oder einen neuen Termin Ihrer Wahl.","Si vous avez réservé à distance et que la prestation a lieu dans plus de cinq jours, le droit de la consommation colombien (loi 1480 de 2011, art. 47) peut vous donner cinq jours ouvrables pour vous rétracter avec remboursement intégral. Passé ce délai, l'acompte n'est pas remboursable en cas d'annulation, car il réserve la date ; vous pouvez reporter une fois avec au moins 72 heures de préavis et l'acompte est reporté. Si je ne peux pas assurer la prestation, vous êtes remboursé de tout ce qui a été payé sous cinq jours ouvrables, ou vous choisissez une nouvelle date.","如果您远程预约且服务日期在五天之后，哥伦比亚消费者法（2011 年第 1480 号法律第 47 条）可能赋予您五个工作日内撤销并获全额退款的权利。此后若您取消，定金不予退还，因为它用于保留日期；您可在至少提前 72 小时通知的情况下改期一次，定金顺延。如我无法提供服务，将在五个工作日内全额退还已付款项，或由您选择新的日期。","Hvis du bestilte på avstand og tjenesten er mer enn fem dager unna, kan colombiansk forbrukerrett (lov 1480 av 2011, art. 47) gi deg fem virkedager til å angre med full refusjon. Etter det refunderes ikke depositumet hvis du avbestiller, fordi det holder datoen; du kan flytte én gang med minst 72 timers varsel, og depositumet overføres. Hvis jeg ikke kan levere tjenesten, får du alt du har betalt refundert innen fem virkedager, eller en ny dato du velger."],
+travelH:["Travel","Viajes","Reisen","Déplacements","出行","Reiser"],
+travelP:["For work outside Bogotá, the client covers transport, lodging and meals for the whole stay.","Para trabajos fuera de Bogotá, el cliente cubre transporte, alojamiento y comidas durante toda la estadía.","Für Einsätze außerhalb von Bogotá trägt der Auftraggeber Transport, Unterkunft und Verpflegung für den gesamten Aufenthalt.","Pour les missions hors de Bogotá, le client prend en charge le transport, l'hébergement et les repas pendant tout le séjour.","在波哥大以外工作时，交通、住宿和餐饮由客户承担。","For oppdrag utenfor Bogotá dekker kunden transport, overnatting og måltider for hele oppholdet."],
+contactH:["Contact","Contacto","Kontakt","Contact","联系","Kontakt"],
+legalIP:["All original content on this site (structure, text and visual material) belongs to the author and is automatically protected by the Berne Convention and Colombian Law 23 of 1982. Textual reproduction must credit the author's name and link to this site.","Todo el contenido original de este sitio (estructura, textos y material visual) pertenece al autor y está protegido automáticamente por el Convenio de Berna y la Ley 23 de 1982 de Colombia. La reproducción textual debe citar el nombre del autor y enlazar este sitio.","Alle Originalinhalte dieser Website (Struktur, Texte und Bildmaterial) gehören dem Autor und sind automatisch durch die Berner Übereinkunft und das kolumbianische Gesetz 23 von 1982 geschützt. Wörtliche Wiedergabe muss den Namen des Autors nennen und auf diese Seite verlinken.","Tout le contenu original de ce site (structure, textes et matériel visuel) appartient à l'auteur et est protégé automatiquement par la Convention de Berne et la loi colombienne 23 de 1982. Toute reproduction textuelle doit citer le nom de l'auteur et renvoyer vers ce site.","本网站的所有原创内容（结构、文字和视觉素材）归作者所有，并自动受《伯尔尼公约》和哥伦比亚 1982 年第 23 号法律保护。逐字转载须注明作者姓名并链接本站。","Alt originalt innhold på dette nettstedet (struktur, tekst og visuelt materiale) tilhører forfatteren og er automatisk beskyttet av Bernkonvensjonen og colombiansk lov 23 av 1982. Ordrett gjengivelse må oppgi forfatterens navn og lenke til dette nettstedet."],
+legalFis:["In Colombia, infringements can be reported to the Fiscalía General de la Nación: national toll-free line 122, or 01 8000 9197 48, fiscalia.gov.co.","En Colombia, las infracciones pueden reportarse a la Fiscalía General de la Nación: línea gratuita nacional 122, o 01 8000 9197 48, fiscalia.gov.co.","In Kolumbien können Verstöße bei der Fiscalía General de la Nación gemeldet werden: gebührenfreie Nummer 122 oder 01 8000 9197 48, fiscalia.gov.co.","En Colombie, les infractions peuvent être signalées à la Fiscalía General de la Nación : ligne gratuite nationale 122, ou 01 8000 9197 48, fiscalia.gov.co.","在哥伦比亚，侵权行为可向国家检察院（Fiscalía General de la Nación）举报：全国免费电话 122，或 01 8000 9197 48，fiscalia.gov.co。","I Colombia kan brudd meldes til Fiscalía General de la Nación: gratis nasjonalt nummer 122, eller 01 8000 9197 48, fiscalia.gov.co."]
+};
 
-  const NAME = getComputedStyle(document.documentElement).getPropertyValue('--name').replace(/"/g,'').trim();
-  const TAGLINE = getComputedStyle(document.documentElement).getPropertyValue('--tagline').replace(/"/g,'').trim();
-  const LOCATION = getComputedStyle(document.documentElement).getPropertyValue('--location').replace(/"/g,'').trim();
-  const EMAIL = getComputedStyle(document.documentElement).getPropertyValue('--email').replace(/"/g,'').trim();
-  const PHONE = getComputedStyle(document.documentElement).getPropertyValue('--phone-display').replace(/"/g,'').trim();
+/* ========= OFFERS (price in COP) ========= */
+const GROUPS = [
+ { id:"pet",    t:"sv_pet",    d:"sv_petD" },
+ { id:"lang",   t:"sv_lang",   d:"sv_langD" },
+ { id:"social", t:"sv_social", d:"sv_socialD" },
+ { id:"dance",  t:"sv_dance",  d:"sv_danceD" },
+ { id:"model",  t:"sv_model",  d:"sv_modelD" },
+ { id:"voice",  t:"sv_voice",  d:"sv_voiceD" },
+ { id:"act",    t:"sv_act",    d:"sv_actD" },
+ { id:"custom", t:"sv_custom", d:"sv_customD" }
+];
+const OFFERS = [
+ { id:"o1", g:"pet", cop:180000 }, { id:"o2", g:"pet", cop:320000 },
+ { id:"o3", g:"lang", cop:40000 }, { id:"o4", g:"lang", cop:80000 }, { id:"o5", g:"lang", cop:290000 },
+ { id:"o6", g:"social", cop:220000 }, { id:"o7", g:"social", cop:650000 },
+ { id:"o8", g:"dance", cop:450000 }, { id:"o9", g:"dance", cop:800000 },
+ { id:"o10", g:"model", cop:180000 }, { id:"o11", g:"model", cop:600000 }, { id:"o12", g:"model", cop:1000000 },
+ { id:"o13", g:"voice", cop:90000 }, { id:"o14", g:"voice", cop:60000 },
+ { id:"o15", g:"act", cop:500000 },
+ { id:"o16", g:"custom", cop:null }
+];
+const TIERS = [ [0,250000], [250001,700000], [700001,1500000], [1500001,Infinity] ];
 
-  document.getElementById('nav-name').textContent = NAME;
-  document.getElementById('hero-name').textContent = NAME;
-  document.getElementById('hero-tagline').textContent = TAGLINE;
-  document.getElementById('hero-location').textContent = LOCATION;
-  document.getElementById('footer-name').textContent = NAME;
-  document.getElementById('footer-email').textContent = EMAIL;
-  document.getElementById('footer-email').href = "mailto:" + EMAIL;
-  document.getElementById('footer-whatsapp').href = "https://wa.me/" + PHONE.replace(/[^0-9]/g,'');
+/* ========= HELPERS ========= */
+const $ = (id)=>document.getElementById(id);
+const waNumber = CONFIG.phone.replace(/[^0-9]/g,'');
+let L = 0, lang = "en", currency = "COP", budget = "all", selectedOffer = "o1";
+const t = (k)=>{ const v = K[k][L]; return v; };
 
-  document.getElementById('reel-iframe').src = "https://www.youtube.com/embed/" + REEL_YOUTUBE_ID;
-  document.getElementById('tiktok-link').href = "https://www.tiktok.com/@" + TIKTOK_HANDLE;
+function pickLang(){
+  try{
+    const q = new URLSearchParams(location.search).get("lang"); if(q && LANGS.includes(q)) return q;
+    const s = localStorage.getItem("lang"); if(s && LANGS.includes(s)) return s;
+  }catch(e){}
+  const n = (navigator.language||"en").toLowerCase();
+  if(n.startsWith("es")) return "es"; if(n.startsWith("de")) return "de"; if(n.startsWith("fr")) return "fr";
+  if(n.startsWith("zh")) return "zh"; if(/^(nb|nn|no)/.test(n)) return "no"; return "en";
+}
+function money(cop, cur){
+  let v = cop;
+  if(cur !== "COP"){ v = Math.ceil((cop / CONFIG.rates[cur]) * CONFIG.feeAllowance / 5) * 5; }
+  return new Intl.NumberFormat(LOCALE[lang], { style:"currency", currency:cur, maximumFractionDigits:0 }).format(v);
+}
+function roundLabel(cop, cur){
+  if(cur === "COP") return money(cop, cur);
+  const v = Math.round(cop / CONFIG.rates[cur] / 10) * 10;
+  return new Intl.NumberFormat(LOCALE[lang], { style:"currency", currency:cur, maximumFractionDigits:0 }).format(v);
+}
 
-  // ---- Carga dinámica de fotos desde carpetas de GitHub ----
-  async function loadFolder(containerId, folderPath){
-    const container = document.getElementById(containerId);
-    if(!container) return;
-    try{
-      const res = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${folderPath}`);
-      if(!res.ok) throw new Error("folder not found");
-      const files = await res.json();
-      const images = Array.isArray(files) ? files.filter(f => /\.(jpe?g|png|webp)$/i.test(f.name)) : [];
-      if(images.length === 0){
-        container.innerHTML = `<div class="empty-note">Aún no hay fotos en esta categoría — súbelas a <code>${folderPath}</code> en GitHub.</div>`;
-        return;
-      }
-      container.innerHTML = images.map(f => `<div class="frame"><img src="${f.download_url}" alt="${f.name}" loading="lazy"></div>`).join('');
-    }catch(err){
-      container.innerHTML = `<div class="empty-note">Configura GITHUB_USER y GITHUB_REPO en el código, y crea la carpeta <code>${folderPath}</code> en tu repositorio.</div>`;
-    }
-  }
-  Object.entries(CATEGORY_FOLDERS).forEach(([id, path]) => loadFolder(id, path));
+/* ========= TABS / ROUTING ========= */
+const TABS = [ ["inicio","tabHome"], ["servicios","tabServices"], ["modelaje","tabModeling"], ["voz","tabVoice"], ["inspiracion","tabInspiration"], ["reservar","tabBook"], ["legal","tabLegal"] ];
+function route(){
+  const id = (location.hash.replace(/^#\/?/,"") || "inicio");
+  const valid = TABS.some(x=>x[0]===id) ? id : "inicio";
+  document.querySelectorAll(".panel").forEach(p=>p.hidden = (p.id !== "p-"+valid));
+  document.querySelectorAll("#tabs a").forEach(a=>{ if(a.dataset.id===valid) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange", route);
 
-  // ---- Slideshow de Evolución de Marca Ética (estilo editorial de revista) ----
-  async function loadSlideshow(){
-    const container = document.getElementById('slideshow-campaign');
-    const navHtml = container.querySelector('.slideshow-nav').outerHTML;
-    try{
-      const res = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${SPEC_CAMPAIGN_FOLDER}`);
-      if(!res.ok) throw new Error("folder not found");
-      const files = await res.json();
-      const images = Array.isArray(files) ? files.filter(f => /\.(jpe?g|png|webp)$/i.test(f.name)) : [];
-      if(images.length === 0){
-        container.innerHTML = `<div class="empty-note" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:var(--paper);">Aún no hay fotos — súbelas a <code>${SPEC_CAMPAIGN_FOLDER}</code> en GitHub.</div>`;
-        return;
-      }
-      let current = 0;
-      const slidesHtml = images.map((f, i) => `
-        <div class="slide ${i===0?'active':''}" data-idx="${i}">
-          <img src="${f.download_url}" alt="${f.name}" loading="lazy">
-          <div class="caption">${f.name.replace(/\.(jpe?g|png|webp)$/i,'').replace(/[_-]/g,' ')}</div>
-        </div>
-      `).join('');
-      container.innerHTML = slidesHtml + navHtml;
-
-      const slides = container.querySelectorAll('.slide');
-      const show = (idx) => {
-        slides.forEach(s => s.classList.remove('active'));
-        slides[idx].classList.add('active');
-        current = idx;
-      };
-      container.querySelector('#slide-prev').addEventListener('click', () => show((current - 1 + slides.length) % slides.length));
-      container.querySelector('#slide-next').addEventListener('click', () => show((current + 1) % slides.length));
-    }catch(err){
-      container.innerHTML = `<div class="empty-note" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:var(--paper); text-align:center; padding:0 20px;">Configura GITHUB_USER y GITHUB_REPO, y crea la carpeta <code>${SPEC_CAMPAIGN_FOLDER}</code>.</div>`;
-    }
-  }
-  loadSlideshow();
-
-  // ---- Formulario de reserva -> WhatsApp ----
-  document.getElementById('send-booking').addEventListener('click', () => {
-    const tipo = document.getElementById('tipo-evento').value;
-    const formato = document.getElementById('formato').value;
-    const fecha = document.getElementById('fecha').value || "por confirmar";
-    const lugar = document.getElementById('lugar').value || "por confirmar";
-    const detalle = document.getElementById('detalle').value || "sin detalles adicionales";
-    const msg = `Hola, quiero cotizar una reserva.%0ATipo de evento: ${tipo}%0AFormato: ${formato}%0AFecha: ${fecha}%0ALugar: ${lugar}%0ADetalles: ${detalle}`;
-    window.open(`https://wa.me/${PHONE.replace(/[^0-9]/g,'')}?text=${msg}`, '_blank');
+/* ========= RENDER ========= */
+function renderTabs(){
+  $("tabs").innerHTML = TABS.map(([id,k])=>`<a href="#/${id}" data-id="${id}">${t(k)}</a>`).join("");
+  $("footer-links").innerHTML = TABS.map(([id,k])=>`<a href="#/${id}">${t(k)}</a>`).join("");
+}
+function renderBudgetSelect(){
+  const c = currency;
+  const labels = [
+    t("bAll"),
+    `${t("bUp")} ${roundLabel(TIERS[0][1],c)}`,
+    `${roundLabel(TIERS[1][0]-1,c)} – ${roundLabel(TIERS[1][1],c)}`,
+    `${roundLabel(TIERS[2][0]-1,c)} – ${roundLabel(TIERS[2][1],c)}`,
+    `${t("bOver")} ${roundLabel(TIERS[2][1],c)}`
+  ];
+  $("sel-budget").innerHTML = ["all","0","1","2","3"].map((v,i)=>`<option value="${v}">${labels[i]}</option>`).join("");
+  $("sel-budget").value = budget;
+}
+function inBudget(o){
+  if(budget==="all") return true;
+  const [lo,hi] = TIERS[+budget];
+  if(o.cop===null) return +budget===3;
+  return o.cop>=lo && o.cop<=hi;
+}
+function renderOffers(){
+  let html = "";
+  GROUPS.forEach(g=>{
+    const list = OFFERS.filter(o=>o.g===g.id && inBudget(o));
+    if(!list.length) return;
+    html += `<div class="service"><div><h3 class="sub">${t(g.t)}</h3><p>${t(g.d)}</p></div><div>` +
+      list.map(o=>`<div class="offer"><span class="nm">${t(o.id)}</span><span class="pr">${o.cop===null?t("onQuote"):money(o.cop,currency)}</span><button type="button" data-offer="${o.id}">${t("request")}</button></div>`).join("") +
+      `</div></div>`;
   });
-</script>
+  $("offers").innerHTML = html || `<p class="nomatch">${t("noMatch")}</p>`;
+}
+function renderBookingSelects(){
+  const cur = $("f-offer").value || selectedOffer;
+  $("f-offer").innerHTML = GROUPS.map(g=>`<optgroup label="${t(g.t)}">` + OFFERS.filter(o=>o.g===g.id).map(o=>`<option value="${o.id}">${t(o.id)}${o.cop===null?"":" — "+money(o.cop,currency)}</option>`).join("") + `</optgroup>`).join("");
+  $("f-offer").value = cur;
+  const fi = $("f-format").value || 0;
+  $("f-format").innerHTML = K.fmOpts[L].map((o,i)=>`<option value="${i}">${o}</option>`).join("");
+  $("f-format").value = fi;
+}
+function applyLang(code){
+  lang = code; L = LANGS.indexOf(code);
+  document.documentElement.lang = LANG_META[code];
+  document.title = t("title");
+  $("meta-desc").setAttribute("content", t("desc"));
+  document.querySelector('meta[property="og:title"]').setAttribute("content", t("title"));
+  document.querySelectorAll("[data-t]").forEach(el=>{ el.textContent = t(el.dataset.t); });
+  document.querySelectorAll("[data-ph]").forEach(el=>{ el.placeholder = t(el.dataset.ph); });
+  $("lang-select").value = code;
+  $("theme-btn").setAttribute("aria-label", t("themeLbl"));
+  renderTabs(); renderBudgetSelect(); renderOffers(); renderBookingSelects(); route();
+  try{ localStorage.setItem("lang", code); }catch(e){}
+}
 
+/* ========= STATIC FILLS ========= */
+const fmtName = (s)=>s.replace(/’/g,'<span class="ap">’</span>');
+$("mast-name").innerHTML = fmtName(CONFIG.displayName);
+$("hero-name").innerHTML = fmtName(CONFIG.displayName);
+$("legal-name").textContent = CONFIG.legalName;
+$("footer-name").innerHTML = fmtName(CONFIG.displayName) + " · " + new Date().getFullYear();
+$("reel-iframe").src = "https://www.youtube-nocookie.com/embed/" + CONFIG.reelId;
+const tt = "https://www.tiktok.com/@" + CONFIG.tiktok, tb = "https://" + CONFIG.tumblr + ".tumblr.com";
+$("tiktok-link").href = tt; $("voice-tt").href = tt; $("voice-tb").href = tb;
+$("notion-link").href = CONFIG.notionUrl;
+$("c-wa").href = "https://wa.me/" + waNumber;
+$("c-tg").href = "https://t.me/" + CONFIG.telegram;
+const mail = CONFIG.emailUser + "@" + CONFIG.emailDomain;
+$("c-mail").textContent = mail; $("c-mail").href = "mailto:" + mail;
+(function extraLinks(){
+  const c = document.querySelector(".contact");
+  const add = (label, url)=>{ const a=document.createElement("a"); a.textContent=label; a.href=url; a.target="_blank"; a.rel="noopener"; c.appendChild(a); };
+  add("TikTok", tt); add("Tumblr", tb);
+  if(CONFIG.instagram) add("Instagram", "https://www.instagram.com/" + CONFIG.instagram);
+  if(CONFIG.threads) add("Threads", "https://www.threads.net/@" + CONFIG.threads);
+  if(CONFIG.wechat) add("WeChat", CONFIG.wechat);
+})();
+
+$("lang-select").addEventListener("change", e=>applyLang(e.target.value));
+function setTheme(v){ document.documentElement.dataset.theme = v; try{ localStorage.setItem("theme", v); }catch(e){} }
+(function initTheme(){ let v = "dark"; try{ v = localStorage.getItem("theme") || "dark"; }catch(e){} document.documentElement.dataset.theme = v; })();
+$("theme-btn").addEventListener("click", ()=>setTheme(document.documentElement.dataset.theme === "ivory" ? "dark" : "ivory"));
+$("sel-cur").addEventListener("change", e=>{ currency = e.target.value; renderBudgetSelect(); renderOffers(); renderBookingSelects(); });
+$("sel-budget").addEventListener("change", e=>{ budget = e.target.value; renderOffers(); });
+$("offers").addEventListener("click", e=>{
+  const b = e.target.closest("button[data-offer]"); if(!b) return;
+  selectedOffer = b.dataset.offer; $("f-offer").value = selectedOffer; location.hash = "#/reservar";
+});
+
+/* ========= GALLERIES FROM GITHUB ========= */
+async function listImages(path){
+  const key = "gh:" + path;
+  try{ const c = sessionStorage.getItem(key); if(c) return JSON.parse(c); }catch(e){}
+  try{
+    const res = await fetch(`https://api.github.com/repos/${CONFIG.githubUser}/${CONFIG.githubRepo}/contents/${path}`);
+    if(!res.ok) return [];
+    const files = await res.json();
+    const imgs = (Array.isArray(files)?files:[]).filter(f=>/\.(jpe?g|png|webp)$/i.test(f.name))
+      .sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true})).map(f=>({name:f.name,url:f.download_url}));
+    try{ sessionStorage.setItem(key, JSON.stringify(imgs)); }catch(e){}
+    return imgs;
+  }catch(e){ return []; }
+}
+const clean = (n)=>n.replace(/\.(jpe?g|png|webp)$/i,'').replace(/[_-]+/g,' ');
+async function loadGrid(gridId, blockId, path){
+  const imgs = await listImages(path); if(!imgs.length) return 0;
+  $(gridId).innerHTML = imgs.map(i=>`<figure><button type="button" data-src="${i.url}"><img src="${i.url}" alt="${clean(i.name)}" loading="lazy"></button></figure>`).join("");
+  $(blockId).hidden = false; return imgs.length;
+}
+async function loadCampaign(){
+  const imgs = await listImages(CAMPAIGN_FOLDER); if(!imgs.length) return 0;
+  const stage = $("stage");
+  stage.insertAdjacentHTML("afterbegin", imgs.map((i,k)=>`<div class="slide${k===0?' on':''}"><img src="${i.url}" alt="${clean(i.name)}" loading="lazy"></div>`).join(""));
+  const slides = stage.querySelectorAll(".slide"); let k = 0;
+  const show = (n)=>{ slides[k].classList.remove("on"); k=(n+slides.length)%slides.length; slides[k].classList.add("on"); };
+  $("prev").onclick = ()=>show(k-1); $("next").onclick = ()=>show(k+1);
+  if(slides.length<2) stage.querySelector(".stage-nav").hidden = true;
+  $("b-campaign").hidden = false; return imgs.length;
+}
+Promise.all([
+  loadGrid("grid-polaroids","b-polaroids",FOLDERS["grid-polaroids"]), loadCampaign(),
+  loadGrid("grid-mascotas","b-mascotas",FOLDERS["grid-mascotas"]), loadGrid("grid-eventos","b-eventos",FOLDERS["grid-eventos"])
+]).then(r=>{ $("soon").hidden = (r[0]+r[1])>0; });
+
+document.addEventListener("click", e=>{
+  const b = e.target.closest(".masonry button");
+  if(b){ $("lb").querySelector("img").src = b.dataset.src; $("lb").hidden = false; }
+  else if(e.target.closest("#lb")){ $("lb").hidden = true; }
+});
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") $("lb").hidden = true; });
+
+/* ========= BOOKING -> WHATSAPP ========= */
+$("send-booking").addEventListener("click", ()=>{
+  const o = OFFERS.find(x=>x.id===$("f-offer").value) || OFFERS[0];
+  const g = GROUPS.find(x=>x.id===o.g);
+  const price = o.cop===null ? t("onQuote") : money(o.cop, currency);
+  const val = (id, fb)=>($(id).value.trim() || fb);
+  const msg = [
+    t("msgIntro"),
+    `${t("lService")}: ${t(g.t)} — ${t(o.id)} (${price})`,
+    `${t("lFormat")}: ${K.fmOpts[L][$("f-format").value||0]}`,
+    `${t("lDate")}: ${val("f-date", t("tbc"))}`,
+    `${t("lPlace")}: ${val("f-place", t("tbc"))}`,
+    `${t("lBudget")}: ${val("f-budget", t("tbc"))}`,
+    `${t("lDetail")}: ${val("f-detail", t("noDetail"))}`
+  ].join("\n");
+  window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
+});
+
+applyLang(pickLang());
+</script>
 </body>
 </html>
