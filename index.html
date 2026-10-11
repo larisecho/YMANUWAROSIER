@@ -7,7 +7,7 @@
 <meta id="meta-desc" name="description" content="">
 <meta property="og:type" content="website">
 <meta property="og:title" content="YME MA’AT NUWA ROSIER">
-<meta property="og:image" content="assets/img/portrait.PNG">
+<meta property="og:image" content="assets/img/portrait.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌹</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,6 +61,14 @@
   .theme-btn{ font:inherit; font-size:15px; line-height:1; background:transparent; color:var(--ivory); border:1px solid var(--gold-dim); padding:6px 11px; cursor:pointer; }
   .theme-btn:hover{ border-color:var(--gold); }
   .ap{ letter-spacing:0; margin:0 .02em 0 -.06em; }
+  .photo-stage{ position:relative; aspect-ratio:3/4; overflow:hidden; background:#FBF8F0; }
+  .photo-stage img.ph{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 25%; opacity:0; transition:opacity .8s ease; }
+  .photo-stage img.ph.on{ opacity:1; }
+  .photo-nav{ position:absolute; right:8px; bottom:8px; display:flex; gap:6px; z-index:2; }
+  .photo-nav button{ width:32px; height:32px; border:1px solid var(--gold); background:rgba(35,34,39,.7); color:#F0EADC; font-size:16px; cursor:pointer; }
+  .photo-nav[hidden]{ display:none; }
+  #hero-photo[hidden]{ display:none; }
+  .from{ font-family:var(--serif); font-style:italic; font-size:21px; color:var(--gold); margin-top:6px; }
   .caption{ margin-top:14px; font-size:13px; color:var(--ivory-dim); }
   .credo{ font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; }
   .tabs{
@@ -79,8 +87,9 @@
   .panel[hidden]{ display:none; }
   .panel{ animation:fade .6s ease both; }
   @keyframes fade{ from{ opacity:0; } to{ opacity:1; } }
-  .block-pad{ padding:clamp(48px,7vw,88px) 0; }
+  .block-pad{ padding-top:clamp(48px,7vw,88px); padding-bottom:clamp(48px,7vw,88px); }
   h2.title{ font-size:clamp(30px,4.4vw,48px); letter-spacing:.14em; text-transform:uppercase; line-height:1.15; margin-bottom:22px; }
+  @media (max-width:420px){ h2.title{ font-size:26px; letter-spacing:.08em; overflow-wrap:anywhere; } }
   h3.sub{ font-size:24px; letter-spacing:.06em; margin-bottom:8px; }
   .rule{ width:56px; height:1px; background:var(--gold); margin:0 0 26px; border:0; }
   .lede{ max-width:60ch; color:var(--ivory); }
@@ -120,16 +129,16 @@
   .service{ padding:30px 0; border-top:1px solid var(--gold-dim); display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:20px 40px; }
   @media (max-width:820px){ .service{ grid-template-columns:1fr; } }
   .service p{ color:var(--ivory-dim); font-size:16px; }
-  .offer{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:11px 0; border-bottom:1px solid rgba(198,161,91,.14); }
+  .offer{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:6px 16px; padding:11px 0; border-bottom:1px solid rgba(198,161,91,.14); }
   .offer:last-child{ border-bottom:0; }
-  .offer .nm{ flex:1; }
+  .offer .nm{ flex:1 1 200px; min-width:0; }
   .offer .pr{ font-family:var(--serif); font-size:22px; color:var(--gold); white-space:nowrap; }
   .offer button{ background:none; border:0; color:var(--ivory-dim); font:inherit; font-size:11px; letter-spacing:.2em; text-transform:uppercase; cursor:pointer; text-decoration:underline; text-underline-offset:4px; }
   .offer button:hover{ color:var(--gold); }
   .nomatch{ padding:30px 0; color:var(--ivory-dim); font-style:italic; border-top:1px solid var(--gold-dim); }
 
   /* facts */
-  .facts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:var(--gold-dim); border:1px solid var(--gold-dim); margin:22px 0 40px; }
+  .facts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr)); gap:1px; background:var(--gold-dim); border:1px solid var(--gold-dim); margin:22px 0 40px; }
   .fact{ background:var(--black); padding:20px 22px; }
   .fact .k{ font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); }
   .fact .v{ font-family:var(--serif); font-size:22px; }
@@ -155,23 +164,31 @@
 
   /* inspirations */
   .names h3{ font-size:13px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); font-family:var(--sans); font-weight:400; margin:30px 0 10px; }
-  .names p{ font-family:var(--serif); font-size:clamp(22px,3vw,30px); line-height:1.5; max-width:46ch; }
+  .names p{ font-family:var(--serif); font-size:clamp(22px,3vw,30px); line-height:1.4; max-width:52ch; display:flex; flex-wrap:wrap; gap:4px 0; }
   .names p span{ white-space:nowrap; }
-  .names p span:not(:last-child)::after{ content:"  /  "; color:var(--gold); white-space:pre; }
+  .names p span:not(:last-child)::after{ content:"/"; color:var(--gold); margin:0 .6em; }
   details{ border-top:1px solid var(--gold-dim); padding:16px 0; margin-top:34px; }
   summary{ cursor:pointer; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); }
   details p{ margin-top:12px; color:var(--ivory-dim); font-size:15px; }
 
   /* booking */
-  .form{ display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:780px; margin:18px 0 20px; }
-  @media (max-width:820px){ .form{ grid-template-columns:1fr; } }
-  .field{ display:flex; flex-direction:column; gap:6px; }
+  .form{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px; max-width:780px; margin:18px 0 20px; }
+  @media (max-width:820px){ .form{ grid-template-columns:minmax(0,1fr); } }
+  .field{ display:flex; flex-direction:column; gap:6px; min-width:0; }
+  .field select,.field input,.field textarea,.ctl select{ width:100%; max-width:100%; min-width:0; text-overflow:ellipsis; }
+  .ctl{ min-width:0; max-width:100%; }
   .field.full{ grid-column:1/-1; }
   .field label{ font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); }
   .form .btn{ grid-column:1/-1; width:fit-content; }
   .cols{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:34px 48px; margin-top:42px; }
   .cols h3{ font-size:13px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); font-family:var(--sans); font-weight:400; margin-bottom:10px; }
   .cols p{ color:var(--ivory-dim); font-size:16px; }
+  .wc{ margin-top:6px; }
+  .wc summary{ cursor:pointer; padding:4px 0; color:var(--ivory); font-size:inherit; letter-spacing:0; text-transform:none; }
+  .wc summary:hover{ color:var(--gold); }
+  .wc p{ margin-top:8px; font-size:15px; color:var(--ivory-dim); }
+  .wc-copy{ font:inherit; font-size:11px; letter-spacing:.2em; text-transform:uppercase; background:none; border:1px solid var(--gold); color:var(--gold); padding:5px 12px; margin-left:10px; cursor:pointer; }
+  .wc-copy:hover{ background:var(--gold); color:var(--black); }
   .contact a{ display:block; text-decoration:none; padding:4px 0; }
   .contact a:hover{ color:var(--gold); }
 
@@ -183,7 +200,7 @@
 
   :lang(zh) body,:lang(zh) .lede{ line-height:1.9; }
   @media (prefers-reduced-motion:reduce){
-    html{ scroll-behavior:auto; } .panel{ animation:none; } .slide{ transition:none; }
+    html{ scroll-behavior:auto; } .panel{ animation:none; } .slide,.photo-stage img.ph{ transition:none; }
   }
 </style>
 </head>
@@ -204,7 +221,7 @@
 
 <nav class="tabs" aria-label="Menu"><div class="wrap" id="tabs"></div></nav>
 
-<noscript><div class="wrap" style="padding:40px 28px;">YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA — Bogotá, Colombia</div></noscript>
+<noscript><div class="wrap" style="padding:40px 28px;">YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA</div></noscript>
 
 <main>
 <!-- INICIO -->
@@ -221,7 +238,7 @@
           <a class="btn ghost" href="#/reservar" data-t="ctaBook"></a>
         </div>
       </div>
-      <div><div class="print"><img src="assets/img/portrait.PNG" alt="YME MA’AT NUWA ROSIER" width="1200" height="1600"></div><p class="caption" data-t="lensNote"></p></div>
+      <div id="hero-photo"><div class="print"><div class="photo-stage" id="photo-stage"><div class="photo-nav" id="photo-nav"><button type="button" id="ph-prev" aria-label="Previous">‹</button><button type="button" id="ph-next" aria-label="Next">›</button></div></div></div><p class="caption" data-t="lensNote"></p></div>
     </div>
   </div>
   <div class="wrap block-pad" style="padding-top:0;">
@@ -241,6 +258,7 @@
     <h2 class="title" data-t="tabServices"></h2>
     <hr class="rule">
     <p class="lede dim" data-t="svcIntro"></p>
+    <p class="small dim" style="margin-top:10px;" data-t="areaNote"></p>
     <div class="controls">
       <div class="ctl"><label for="sel-cur" data-t="lCurrency"></label><select id="sel-cur"><option>COP</option><option>USD</option><option>EUR</option></select></div>
       <div class="ctl"><label for="sel-budget" data-t="lBudget"></label><select id="sel-budget"></select></div>
@@ -298,8 +316,9 @@
     <h2 class="title" data-t="tabInspiration"></h2>
     <hr class="rule">
     <p class="credo" data-t="credoLbl"></p>
-    <h3 class="sub">Universum Manifestation</h3>
-    <p class="lede dim" style="margin-top:10px;" data-t="unIntro"></p>
+    <h3 class="sub" data-t="tabUniversum"></h3>
+    <p class="from" data-t="unFrom"></p>
+    <p class="lede dim" style="margin-top:14px;" data-t="unIntro"></p>
     <div class="names">
       <h3 data-t="gScreen"></h3>
       <p><span>Valentina Zenere</span><span>Gino Pasqualini</span><span>Franco Masini</span><span>Ester Expósito</span><span>Matt Bomer</span><span>Uma Thurman</span><span>Scarlett Johansson</span><span>Viola Davis</span><span>Octavia Spencer</span><span>Nicole Kidman</span><span>Sofía Vergara</span><span>Uzo Aduba</span><span>Evan Peters</span></p>
@@ -307,6 +326,8 @@
       <p><span>Shakira</span></p>
       <h3 data-t="gThought"></h3>
       <p><span>Simone de Beauvoir</span><span>Eve Kosofsky Sedgwick</span><span>Julio Cortázar</span><span>Nikola Tesla</span><span>Carl Jung</span></p>
+      <h3 data-t="gAlias"></h3>
+      <p><span>🌹✨🐈</span><span>ML Fuente en Acción</span></p>
     </div>
     <p class="dim small" style="margin-top:34px;" data-t="unMore"></p>
     <p style="margin-top:18px;"><a class="btn" id="notion-link" href="#" target="_blank" rel="noopener" data-t="notionBtn"></a></p>
@@ -337,7 +358,7 @@
       <div><h3 data-t="depH"></h3><p data-t="depP"></p></div>
       <div><h3 data-t="canH"></h3><p data-t="canP"></p></div>
       <div><h3 data-t="travelH"></h3><p data-t="travelP"></p></div>
-      <div class="contact"><h3 data-t="contactH"></h3><a id="c-wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a id="c-tg" href="#" target="_blank" rel="noopener">Telegram</a><a id="c-mail" href="#"></a></div>
+      <div class="contact"><h3 data-t="contactH"></h3><a id="c-wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a id="c-tg" href="#" target="_blank" rel="noopener">Telegram</a><a id="c-mail" href="#"></a><details class="wc" id="wc"><summary><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" style="vertical-align:-2px;margin-right:8px"><path d="M8 2C4.7 2 2 4.2 2 7c0 1.5.8 2.8 2 3.7L3.6 13l2.4-1.2c.6.2 1.3.3 2 .3 3.3 0 6-2.2 6-5S11.300 2 8 2z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>WeChat</summary><p style="margin:12px 0 6px;"><a class="btn ghost" id="wc-link" href="#" target="_blank" rel="noopener" data-t="wcOpen" style="padding:10px 18px;"></a></p><p data-t="wcSteps"></p><p class="wc-num"><span id="wc-num"></span> <button type="button" id="wc-copy" class="wc-copy" data-t="wcCopy"></button></p></details></div>
     </div>
   </div>
 </section>
@@ -370,11 +391,13 @@ const CONFIG = {
   emailUser: "poseidonpeithonuros", emailDomain: "proton.me",
   phone: "+57 315 611 0435",
   tiktok: "umanuwarosierhaven",     // services TikTok for now
-  tumblr: "ymanuwarosierhaven",     // confirm this Tumblr address
-  telegram: "ymanuwarosier",      // confirm the exact spelling of the Telegram username
-  instagram: "", threads: "", wechat: "",   // fill in when they exist; links appear automatically
+  tumblr: "ymanuwarosier",
+  telegram: "UMANUWAROSIER",
+  instagram: "ymanuwarosierhaven", threads: "",   // fill in when they exist; links appear automatically
   githubUser: "larisecho", githubRepo: "YMANUWAROSIER",
   reelId: "CcKe-NTfUXc",
+  wechatUrl: "https://u.wechat.com/kLXgs_sM7RFCz3J8fwtBrJw?s=2",   // your WeChat add-friend link
+  photos: ["assets/img/portrait.jpg","assets/img/portrait2.jpg","assets/img/portrait3.jpg","assets/img/portrait4.jpg"],  // real JPEG files, lighter than PNG
   notionUrl: "https://app.notion.com/p/INSPIRACION-INSPIRATION-INSPIRATION-CIRCLE-397a7e8a7ac880589c18fc7f1b6558c1",
   rates: { USD: 3250, EUR: 3600 },  // COP per unit, October 2026. Update every month or two.
   feeAllowance: 1.08                // cushion for transfer / PayPal fees on USD and EUR prices
@@ -387,21 +410,33 @@ const LANGS = ["en","es","de","fr","zh","no"];
 const LANG_META = { en:"en", es:"es", de:"de", fr:"fr", zh:"zh-Hans", no:"nb" };
 const LOCALE = { en:"en-US", es:"es-CO", de:"de-DE", fr:"fr-FR", zh:"zh-CN", no:"nb-NO" };
 const K = {
-title:["YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modeling, dance, voice and acting | Bogotá","YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modelaje, baile, voz y actuación | Bogotá","YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modeling, Tanz, Stimme und Schauspiel | Bogotá","YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Mannequinat, danse, voix et jeu | Bogotá","YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | 模特、舞蹈、配音与表演 | 波哥大","YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modellarbeid, dans, stemme og skuespill | Bogotá"],
-desc:["Official portfolio: modeling, dance, voice acting, screen acting, pet photography and language coaching in Bogotá, with rates by budget.","Portafolio oficial: modelaje, baile, actuación de voz y de pantalla, fotografía de mascotas e idiomas en Bogotá, con tarifas por presupuesto.","Offizielles Portfolio: Modeling, Tanz, Sprecher- und Schauspielarbeit, Haustierfotografie und Sprachcoaching in Bogotá, mit Preisen nach Budget.","Portfolio officiel : mannequinat, danse, voix, jeu à l'écran, photographie d'animaux et coaching de langues à Bogotá, avec tarifs selon le budget.","官方作品集：波哥大的模特、舞蹈、配音、影视表演、宠物摄影和语言辅导，按预算提供价格。","Offisielt portefølje: modellarbeid, dans, stemme- og skjermskuespill, kjæledyrfotografering og språkcoaching i Bogotá, med priser etter budsjett."],
+title:["YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modeling, dance, voice, acting and UGC", "YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modelaje, baile, voz, actuación y UGC", "YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modeling, Tanz, Stimme, Schauspiel und UGC", "YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Mannequinat, danse, voix, jeu et UGC", "YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | 模特、舞蹈、配音、表演与 UGC", "YME MA’AT NUWA ROSIER — ELIL ROSIER ESPITIA | Modellarbeid, dans, stemme, skuespill og UGC"],
+desc:["Official portfolio: modeling, dance, voice acting, screen acting, UGC content, pet photography and language coaching, with rates by budget.", "Portafolio oficial: modelaje, baile, actuación de voz y de pantalla, contenido UGC, fotografía de mascotas e idiomas, con tarifas por presupuesto.", "Offizielles Portfolio: Modeling, Tanz, Sprecher- und Schauspielarbeit, UGC-Content, Haustierfotografie und Sprachcoaching, mit Preisen nach Budget.", "Portfolio officiel : mannequinat, danse, voix, jeu à l'écran, contenu UGC, photographie d'animaux et coaching de langues, avec tarifs selon le budget.", "官方作品集：模特、舞蹈、配音、影视表演、UGC 内容、宠物摄影和语言辅导，按预算提供价格。", "Offisielt portefølje: modellarbeid, dans, stemme- og skjermskuespill, UGC-innhold, kjæledyrfotografering og språkcoaching, med priser etter budsjett."],
 tabHome:["Home","Inicio","Start","Accueil","首页","Hjem"],
 tabServices:["Services and rates","Servicios y tarifas","Leistungen und Preise","Services et tarifs","服务与价格","Tjenester og priser"],
 tabModeling:["Modeling","Modelaje","Modeling","Mannequinat","模特","Modellarbeid"],
 tabVoice:["Voice and acting","Voz y actuación","Stimme und Schauspiel","Voix et jeu d'acteur","配音与表演","Stemme og skuespill"],
 tabInspiration:["Inspiration","Inspiración","Inspiration","Inspiration","灵感","Inspirasjon"],
-credoLbl:["My credo","Mi credo","Mein Credo","Mon credo","我的信条","Min credo"],
+tabUniversum:["Universum Manifestation", "Universum Manifestación", "Universum Manifestation", "Universum Manifestation", "Universum 显化", "Universum Manifestasjon"],
+unFrom:["Said from my credo and belief system to the people who inspire me.", "Dicho desde mi credo y sistema de creencias a las personas que me inspiran.", "Gesprochen aus meinem Credo und Glaubenssystem an die Menschen, die mich inspirieren.", "Dit depuis mon credo et mon système de croyances aux personnes qui m'inspirent.", "从我的信条与信仰体系出发，献给启发我的人。", "Sagt fra mitt credo og trossystem til menneskene som inspirerer meg."],
+gAlias:["Aliases", "Alias", "Aliasnamen", "Alias", "别名", "Alias"],
+areaNote:["In person in Bogotá, and elsewhere by agreement with travel covered. Remote work from anywhere.", "Presencial en Bogotá, y en otros lugares por acuerdo con viaje cubierto. Trabajo remoto desde cualquier lugar.", "Vor Ort in Bogotá, andernorts nach Absprache mit übernommenen Reisekosten. Remote-Arbeit von überall.", "Sur place à Bogotá, et ailleurs sur accord avec déplacements pris en charge. Travail à distance depuis n'importe où.", "线下在波哥大，其他地点经协商且差旅由客户承担。远程工作不限地点。", "Fysisk i Bogotá, og andre steder etter avtale med dekket reise. Eksternt arbeid fra hvor som helst."],
+sv_ugc:["UGC content for brands", "Contenido UGC para marcas", "UGC-Content für Marken", "Contenu UGC pour les marques", "品牌 UGC 内容", "UGC-innhold for merker"],
+sv_ugcD:["Authentic short videos and photos for brands, made remotely or in person. Each project is agreed with everyone involved, with clear consent and image-use terms.", "Videos cortos y fotos auténticas para marcas, hechos a distancia o en persona. Cada proyecto se acuerda con todas las personas involucradas, con consentimiento y términos de uso de imagen claros.", "Authentische Kurzvideos und Fotos für Marken, remote oder vor Ort erstellt. Jedes Projekt wird mit allen Beteiligten abgestimmt, mit klarem Einvernehmen und klaren Bildnutzungsbedingungen.", "Vidéos courtes et photos authentiques pour les marques, réalisées à distance ou sur place. Chaque projet est convenu avec toutes les personnes concernées, avec un consentement et des conditions d'usage de l'image clairs.", "为品牌制作真实的短视频和照片，可远程或线下完成。每个项目都与所有相关人员商定，并明确知情同意和肖像使用条款。", "Autentiske korte videoer og bilder for merker, laget eksternt eller fysisk. Hvert prosjekt avtales med alle involverte, med tydelig samtykke og vilkår for bruk av bilder."],
+o17:["One UGC video (15–30 s, edited)", "Un video UGC (15–30 s, editado)", "Ein UGC-Video (15–30 Sek., geschnitten)", "Une vidéo UGC (15–30 s, montée)", "单条 UGC 视频（15–30 秒，已剪辑）", "Én UGC-video (15–30 sek., redigert)"],
+o18:["Pack of 3 UGC videos", "Paquete de 3 videos UGC", "Paket mit 3 UGC-Videos", "Pack de 3 vidéos UGC", "3 条 UGC 视频套餐", "Pakke med 3 UGC-videoer"],
+wcSteps:["Tap the button on your phone with WeChat installed, or open WeChat, tap +, then Add Contacts, and search for the number below. Then send me a message with the service you want to book.", "Toca el botón desde tu celular con WeChat instalado, o abre WeChat, toca +, luego Añadir contactos y busca el número de abajo. Después envíame un mensaje con el servicio que quieres reservar.", "Tippen Sie auf Ihrem Handy mit installiertem WeChat auf die Schaltfläche, oder öffnen Sie WeChat, tippen Sie auf +, dann auf Kontakte hinzufügen, und suchen Sie die untenstehende Nummer. Senden Sie mir danach eine Nachricht mit der gewünschten Leistung.", "Touchez le bouton depuis votre téléphone avec WeChat installé, ou ouvrez WeChat, touchez +, puis Ajouter des contacts, et recherchez le numéro ci-dessous. Envoyez-moi ensuite un message avec le service à réserver.", "在已安装微信的手机上点击按钮，或打开微信，点击“+”，选择“添加朋友”，搜索下方号码。然后发消息告诉我您想预约的服务。", "Trykk på knappen på telefonen din med WeChat installert, eller åpne WeChat, trykk på +, deretter Legg til kontakter, og søk etter nummeret under. Send meg så en melding med tjenesten du vil bestille."],
+wcOpen:["Add me on WeChat", "Agregarme en WeChat", "Mich auf WeChat hinzufügen", "M'ajouter sur WeChat", "在微信添加我", "Legg meg til på WeChat"],
+wcCopy:["Copy number", "Copiar número", "Nummer kopieren", "Copier le numéro", "复制号码", "Kopier nummer"],
+wcCopied:["Copied", "Copiado", "Kopiert", "Copié", "已复制", "Kopiert"],
+credoLbl:["Credo and belief system","Credo y sistema de creencias","Credo und Glaubenssystem","Credo et système de croyances","信条与信仰体系","Credo og trossystem"],
 themeLbl:["Light or dark theme","Tema claro u oscuro","Helles oder dunkles Design","Thème clair ou sombre","明暗主题","Lyst eller mørkt tema"],
 lensNote:["Some photos use colored contact lenses.","Algunas fotos usan lentes de contacto de color.","Einige Fotos zeigen farbige Kontaktlinsen.","Certaines photos utilisent des lentilles de contact colorées.","部分照片佩戴彩色隐形眼镜。","Noen bilder bruker fargede kontaktlinser."],
 tabBook:["Book and payments","Reservar y pagos","Buchen und Zahlung","Réserver et paiement","预约与付款","Bestill og betaling"],
 tabLegal:["Legal","Aviso legal","Rechtliches","Mentions légales","法律声明","Juridisk"],
-tagline:["Modeling, dance, voice and screen acting, languages. Bogotá, Colombia.","Modelaje, baile, actuación de voz y de pantalla, idiomas. Bogotá, Colombia.","Modeling, Tanz, Sprecher- und Schauspielarbeit, Sprachen. Bogotá, Kolumbien.","Mannequinat, danse, voix et jeu à l'écran, langues. Bogotá, Colombie.","模特、舞蹈、配音与影视表演、语言。哥伦比亚波哥大。","Modellarbeid, dans, stemme- og skjermskuespill, språk. Bogotá, Colombia."],
+tagline:["Modeling, dance, voice and screen acting, UGC, languages.", "Modelaje, baile, actuación de voz y de pantalla, UGC, idiomas.", "Modeling, Tanz, Sprecher- und Schauspielarbeit, UGC, Sprachen.", "Mannequinat, danse, voix et jeu à l'écran, UGC, langues.", "模特、舞蹈、配音与影视表演、UGC、语言。", "Modellarbeid, dans, stemme- og skjermskuespill, UGC, språk."],
 langs:["Spanish (native), English C2, German B2, French A2, Chinese A2","Español (nativo), inglés C2, alemán B2, francés A2, chino A2","Spanisch (Muttersprache), Englisch C2, Deutsch B2, Französisch A2, Chinesisch A2","Espagnol (langue maternelle), anglais C2, allemand B2, français A2, chinois A2","西班牙语（母语）、英语 C2、德语 B2、法语 A2、中文 A2","Spansk (morsmål), engelsk C2, tysk B2, fransk A2, kinesisk A2"],
-about:["Bilingual and based in Bogotá. Former consecutive medical interpreter (English–Spanish). Today I work in modeling, dance, and voice and screen acting, and I build independent creative projects. I work with clear agreements, consent and professionalism.","Bilingüe y radicado en Bogotá. Antiguo intérprete médico consecutivo (inglés–español). Hoy trabajo en modelaje, baile y actuación de voz y de pantalla, y construyo proyectos creativos independientes. Trabajo con acuerdos claros, consentimiento y profesionalismo.","Zweisprachig und in Bogotá zu Hause. Früher Konsekutivdolmetscher für Medizin (Englisch–Spanisch). Heute arbeite ich in Modeling, Tanz sowie Sprecher- und Schauspielarbeit und baue unabhängige kreative Projekte auf. Ich arbeite mit klaren Absprachen, Einvernehmen und Professionalität.","Bilingue, installé à Bogotá. Ancien interprète médical consécutif (anglais–espagnol). Je travaille aujourd'hui dans le mannequinat, la danse, la voix et le jeu à l'écran, et je construis des projets créatifs indépendants. Je travaille avec des accords clairs, le consentement et du professionnalisme.","双语，常驻波哥大。曾任医疗连续传译员（英语—西班牙语）。现在从事模特、舞蹈、配音和影视表演，并独立打造创意项目。我以清晰的约定、知情同意和职业态度工作。","Tospråklig og basert i Bogotá. Tidligere konsekutiv medisinsk tolk (engelsk–spansk). I dag jobber jeg med modellarbeid, dans samt stemme- og skjermskuespill, og bygger selvstendige kreative prosjekter. Jeg jobber med tydelige avtaler, samtykke og profesjonalitet."],
+about:["Bilingual, working in person and remotely. Former consecutive medical interpreter (English–Spanish). Today I work in modeling, dance, voice and screen acting, and UGC content, and I build independent creative projects. I work with clear agreements, consent and professionalism.", "Bilingüe, trabajo de forma presencial y remota. Antiguo intérprete médico consecutivo (inglés–español). Hoy trabajo en modelaje, baile, actuación de voz y de pantalla y contenido UGC, y construyo proyectos creativos independientes. Trabajo con acuerdos claros, consentimiento y profesionalismo.", "Zweisprachig, vor Ort und remote tätig. Früher Konsekutivdolmetscher für Medizin (Englisch–Spanisch). Heute arbeite ich in Modeling, Tanz, Sprecher- und Schauspielarbeit sowie UGC-Content und baue unabhängige kreative Projekte auf. Ich arbeite mit klaren Absprachen, Einvernehmen und Professionalität.", "Bilingue, je travaille sur place et à distance. Ancien interprète médical consécutif (anglais–espagnol). Je travaille aujourd'hui dans le mannequinat, la danse, la voix, le jeu à l'écran et le contenu UGC, et je construis des projets créatifs indépendants. Je travaille avec des accords clairs, le consentement et du professionnalisme.", "双语，线下与远程均可合作。曾任医疗连续传译员（英语—西班牙语）。现在从事模特、舞蹈、配音、影视表演和 UGC 内容创作，并独立打造创意项目。我以清晰的约定、知情同意和职业态度工作。", "Tospråklig, jobber både fysisk og eksternt. Tidligere konsekutiv medisinsk tolk (engelsk–spansk). I dag jobber jeg med modellarbeid, dans, stemme- og skjermskuespill og UGC-innhold, og bygger selvstendige kreative prosjekter. Jeg jobber med tydelige avtaler, samtykke og profesjonalitet."],
 ctaServices:["See services and rates","Ver servicios y tarifas","Leistungen und Preise ansehen","Voir services et tarifs","查看服务与价格","Se tjenester og priser"],
 ctaBook:["Book","Reservar","Buchen","Réserver","预约","Bestill"],
 reelH:["Reel","Reel","Reel","Reel","短片","Reel"],
@@ -474,7 +509,7 @@ lFormat:["Format","Formato","Format","Format","形式","Format"],
 fmOpts:[["In person","Virtual"],["Presencial","Virtual"],["Vor Ort","Virtuell"],["Sur place","Virtuel"],["线下","线上"],["Fysisk","Virtuelt"]],
 lDate:["Proposed date","Fecha propuesta","Vorgeschlagenes Datum","Date proposée","拟定日期","Foreslått dato"],
 lPlace:["Place / city","Lugar / ciudad","Ort / Stadt","Lieu / ville","地点 / 城市","Sted / by"],
-phPlace:["e.g. Bogotá","Ej. Bogotá","z. B. Bogotá","Ex. Bogotá","例如：波哥大","f.eks. Bogotá"],
+phPlace:["City, country", "Ciudad, país", "Stadt, Land", "Ville, pays", "城市、国家", "By, land"],
 phBudget:["Amount and currency","Monto y moneda","Betrag und Währung","Montant et devise","金额与货币","Beløp og valuta"],
 lDetail:["Additional details","Detalles adicionales","Weitere Angaben","Détails supplémentaires","补充说明","Tilleggsopplysninger"],
 phDetail:["Duration, number of people, venue...","Duración, número de personas, lugar...","Dauer, Personenzahl, Ort...","Durée, nombre de personnes, lieu...","时长、人数、场地……","Varighet, antall personer, sted..."],
@@ -503,6 +538,7 @@ const GROUPS = [
  { id:"social", t:"sv_social", d:"sv_socialD" },
  { id:"dance",  t:"sv_dance",  d:"sv_danceD" },
  { id:"model",  t:"sv_model",  d:"sv_modelD" },
+ { id:"ugc",    t:"sv_ugc",    d:"sv_ugcD" },
  { id:"voice",  t:"sv_voice",  d:"sv_voiceD" },
  { id:"act",    t:"sv_act",    d:"sv_actD" },
  { id:"custom", t:"sv_custom", d:"sv_customD" }
@@ -515,6 +551,7 @@ const OFFERS = [
  { id:"o10", g:"model", cop:180000 }, { id:"o11", g:"model", cop:600000 }, { id:"o12", g:"model", cop:1000000 },
  { id:"o13", g:"voice", cop:90000 }, { id:"o14", g:"voice", cop:60000 },
  { id:"o15", g:"act", cop:500000 },
+ { id:"o17", g:"ugc", cop:250000 }, { id:"o18", g:"ugc", cop:650000 },
  { id:"o16", g:"custom", cop:null }
 ];
 const TIERS = [ [0,250000], [250001,700000], [700001,1500000], [1500001,Infinity] ];
@@ -623,6 +660,9 @@ const tt = "https://www.tiktok.com/@" + CONFIG.tiktok, tb = "https://" + CONFIG.
 $("tiktok-link").href = tt; $("voice-tt").href = tt; $("voice-tb").href = tb;
 $("notion-link").href = CONFIG.notionUrl;
 $("c-wa").href = "https://wa.me/" + waNumber;
+$("wc-num").textContent = CONFIG.phone;
+if(CONFIG.wechatUrl){ $("wc-link").href = CONFIG.wechatUrl; } else { $("wc-link").parentElement.hidden = true; }
+$("wc-copy").addEventListener("click", ()=>{ const b = $("wc-copy"); const done = ()=>{ b.textContent = t("wcCopied"); setTimeout(()=>{ b.textContent = t("wcCopy"); }, 1600); }; if(navigator.clipboard){ navigator.clipboard.writeText("+" + waNumber).then(done, done); } else { done(); } });
 $("c-tg").href = "https://t.me/" + CONFIG.telegram;
 const mail = CONFIG.emailUser + "@" + CONFIG.emailDomain;
 $("c-mail").textContent = mail; $("c-mail").href = "mailto:" + mail;
@@ -632,7 +672,6 @@ $("c-mail").textContent = mail; $("c-mail").href = "mailto:" + mail;
   add("TikTok", tt); add("Tumblr", tb);
   if(CONFIG.instagram) add("Instagram", "https://www.instagram.com/" + CONFIG.instagram);
   if(CONFIG.threads) add("Threads", "https://www.threads.net/@" + CONFIG.threads);
-  if(CONFIG.wechat) add("WeChat", CONFIG.wechat);
 })();
 
 $("lang-select").addEventListener("change", e=>applyLang(e.target.value));
@@ -705,6 +744,23 @@ $("send-booking").addEventListener("click", ()=>{
   ].join("\n");
   window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
 });
+
+async function loadHeroPhotos(){
+  const ok = [];
+  await Promise.all(CONFIG.photos.map((src,i)=>new Promise(res=>{ const im = new Image(); im.onload = ()=>{ ok[i]=src; res(); }; im.onerror = ()=>res(); im.src = src; })));
+  const list = ok.filter(Boolean);
+  if(!list.length){ $("hero-photo").hidden = true; return; }
+  const stage = $("photo-stage");
+  stage.insertAdjacentHTML("afterbegin", list.map((s,i)=>`<img class="ph${i===0?' on':''}" src="${s}" alt="${CONFIG.displayName}">`).join(""));
+  const imgs = stage.querySelectorAll("img.ph"); let k = 0, timer = null;
+  const show = (n)=>{ imgs[k].classList.remove("on"); k=(n+imgs.length)%imgs.length; imgs[k].classList.add("on"); };
+  if(imgs.length < 2){ $("photo-nav").hidden = true; return; }
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(!reduced) timer = setInterval(()=>show(k+1), 5000);
+  $("ph-prev").onclick = ()=>{ clearInterval(timer); show(k-1); };
+  $("ph-next").onclick = ()=>{ clearInterval(timer); show(k+1); };
+}
+loadHeroPhotos();
 
 applyLang(pickLang());
 </script>
